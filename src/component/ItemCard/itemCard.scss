@@ -15,7 +15,6 @@
   .image{
     width: 100%;
     // border: 2px solid red;
-
     height: 55%;
 padding: 0 12% ;
     img {
@@ -33,6 +32,43 @@ height: 40%;
 display: flex;
 flex-direction: column;
 justify-content: center;
+// border: 2px solid blue;
+.item-name {
+  font-weight: 600;
+  // border: 2px solid red;
+  margin: 0;
+
+}
+.ratings {
+  color: rgb(206, 24, 10);
+  // border: 2px solid red;
+  margin: 0;
+
+}
+.price {
+  color: rgb(124, 5, 5);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // border: 2px solid red;
+  margin: 0;
+  .add-to-cart {
+    background-color: transparent;
+    border: 1px solid var(--clr-secondary);
+    border-radius: 5px;
+    padding: 0 10px;
+    color: var(--clr-secondary);
+    font-weight: 700;
+    cursor: pointer;
+    transition: .6s;
+  }
+  .add-to-cart:hover{
+    background-color: var(--clr-secondary);
+    color: white;
+    transition: .6s;
+  }
+}
   }
   .discount {
     background-color: var(--clr-reddish-brown);
@@ -45,39 +81,8 @@ justify-content: center;
     font-size: 70%;
  
   }
-  .item-name {
-    font-weight: 600;
-    // border: 2px solid red;
-    height: fit-content;
-  }
-  .ratings {
-    color: rgb(206, 24, 10);
-  }
-  .price {
-    color: rgb(124, 5, 5);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    .add-to-cart {
-      background-color: transparent;
-      border: 1px solid var(--clr-secondary);
-      border-radius: 5px;
-      padding: 0 10px;
-      color: var(--clr-secondary);
-      font-weight: 700;
-      // display: flex;
-      // align-items: center;
-      cursor: pointer;
-      transition: .6s;
-    }
-    .add-to-cart:hover{
-      background-color: var(--clr-secondary);
-      color: white;
-      transition: .6s;
-    }
-  }
+ 
+
 }
 
 .item_container:hover{
@@ -88,7 +93,12 @@ justify-content: center;
 @media (max-width:760px) {
   .item_container {
     height: 300px;
-    padding: 5px 0;
+    padding: 5px 10px;
     gap: 10px;
+    .description{
+      .price{
+        margin-bottom: 5px;
+      }
+    }
   }
 }

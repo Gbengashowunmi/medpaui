@@ -13,7 +13,7 @@ export default function ItemCard({image,productName}) {
 
         <p className='item-name'>{productName}</p>
         <p className='ratings'><BsStarFill/> <BsStarFill/> <BsStarFill/> <BsStarHalf/> <BsStar/></p>
-        <p className='price'>$689 <span><button className='add-to-cart'><h3>+</h3></button></span></p>
+        <p className='price'>$689 <span><button className='add-to-cart'><h5>+</h5></button></span></p>
         </div>
         <div className='discount'>%565 off</div>
         
