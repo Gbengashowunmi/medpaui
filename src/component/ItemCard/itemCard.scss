@@ -84,3 +84,11 @@ justify-content: center;
   box-shadow: 1px 5px 8px var(--clr-border-shadow);
 
 }
+
+@media (max-width:760px) {
+  .item_container {
+    height: 300px;
+    padding: 5px 0;
+    gap: 10px;
+  }
+}
