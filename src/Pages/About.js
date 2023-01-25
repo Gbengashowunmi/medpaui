@@ -92,7 +92,7 @@ export default function About() {
       <section className="choose-us">
         <h3>Why Choose Medpau
 </h3>
-<p>We constantly evolve in the way we meet the needs of our customers, always asking questions and discovering better ways to satisfy them. More so, our solutions are custom made, tailored to meet needs individually.</p>
+<p className="heading">We constantly evolve in the way we meet the needs of our customers, always asking questions and discovering better ways to satisfy them. More so, our solutions are custom made, tailored to meet needs individually.</p>
 <div className="choose-us-wrapper">
   <ChooseUsCard title="Solutions Not Just Products" details="We offer custom made solutions in form of products, services and options to affordable healthcare. We support our customers and help them helps them thrive and rise above the challenges confronting healthcare businesses." image="images/medical-solution.jpg"  />
   <ChooseUsCard title="We Really Care About You" details="We listen to understand the needs your needs and ensure we offer them what is best for them, in the most cost-effective way and without compromising on quality. Knowing that a healthy society will translate to better economy and quality of life" image="images/cropped-shot-female-nurse-hold-260nw-2125640579.jpg" />

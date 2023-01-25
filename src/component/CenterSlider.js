@@ -39,37 +39,37 @@ export default function CenterSlider() {
   return (
     <Slider {...settings}>
       <div className="item">
-        <ProductCard image="/images/2-removebg-preview.png" />
+        <ProductCard image="/images/product-images/equipment01.jpg" />
       </div>
       <div className="item">
-        <ProductCard image="/images/2-removebg-preview.png" />
+        <ProductCard image="/images/product-images/equipment02.jpg" />
       </div>
       <div className="item">
-        <ProductCard image="/images/2-removebg-preview.png" />
+        <ProductCard image="/images/product-images/equipment03.jpg" />
       </div>
       <div className="item">
-        <ProductCard image="/images/2-removebg-preview.png" />
+        <ProductCard image="/images/product-images/equipment04.png" />
       </div>
       <div className="item">
-        <ProductCard image="/images/2-removebg-preview.png" />
+        <ProductCard image="/images/product-images/equipment05.png" />
       </div>
       <div className="item">
-        <ProductCard image="/images/2-removebg-preview.png" />
+        <ProductCard image="/images/product-images/equipment06.jpg" />
       </div>
       <div className="item">
-        <ProductCard image="/images/2-removebg-preview.png" />
+        <ProductCard image="/images/product-images/equipment07.png" />
       </div>
       <div className="item">
-        <ProductCard image="/images/2-removebg-preview.png" />
+        <ProductCard image="/images/product-images/equipment08.jpg" />
       </div>
       <div className="item">
-        <ProductCard image="/images/2-removebg-preview.png" />
+        <ProductCard image="/images/product-images/equipment09.jpg" />
       </div>
       <div className="item">
-        <ProductCard image="/images/2-removebg-preview.png" />
+        <ProductCard image="/images/product-images/equipment10.jpg" />
       </div>
       <div className="item">
-        <ProductCard image="/images/2-removebg-preview.png" />
+        <ProductCard image="/images/product-images/equipment11.png" />
       </div>
      
     </Slider>

@@ -11,7 +11,7 @@ export default function TeamSlide() {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 2000,
+    speed: 3000,
     autoplaySpeed: 2500,
     cssEase: "linear",
     responsive: [

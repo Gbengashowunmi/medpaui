@@ -9,8 +9,8 @@ export default function Carousel() {
     slidesToScroll: 1,
     fade: true,
     autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 4500,
+    speed: 3500,
+    autoplaySpeed: 3000,
     cssEase: "linear",
   };
   return (

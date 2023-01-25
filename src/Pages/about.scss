@@ -112,7 +112,7 @@ width: 100%;
 background-color: var(--clr-background-grey);
   width: 100%;
 height: fit-content;
-  p{
+  .heading{
     width: 60%;
     margin: auto;
     padding-bottom: 20px;
@@ -197,6 +197,12 @@ p{
       margin: 2rem 0.5rem;
     }
   }
+
+  .choose-us{
+    .heading{
+      width: 85%;
+    }
+  }
 }
 
 @media (max-width:550px) {
@@ -251,6 +257,11 @@ ul{
       }
 
       .choose-us{
+        
+          .heading{
+            width: 95%;
+          }
+        
         .choose-us-wrapper{
 
           display: grid;
