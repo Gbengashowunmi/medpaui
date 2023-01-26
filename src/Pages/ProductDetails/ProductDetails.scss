@@ -76,23 +76,32 @@
   }
 }
 
-@media (max-width: 770px) {
+@media (max-width: 900px) {
   .product-page {
     .hero-section {
       grid-template-columns: 1fr;
-      // border: 2px solid red;
-      .product-img {
-        // border: 2px solid blue;
-      }
-
-      .product-info {
-        // border: 2px solid red;
-        text-align: left;
-      }
     }
     .related-products {
       .item-cards {
+        grid-template-columns: 0.5fr 0.5fr .5fr;
+      }
+    }
+  }
+}
+@media (max-width: 650px) {
+  .product-page {
+    .related-products {
+      .item-cards {
         grid-template-columns: 0.5fr 0.5fr;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .product-page {
+    .related-products {
+      .item-cards {
+        grid-template-columns: 1fr;
       }
     }
   }
