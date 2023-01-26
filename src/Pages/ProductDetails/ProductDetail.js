@@ -39,9 +39,12 @@ export default function ProductDetail() {
             </div> */}
           </div>
           <div className="product-info">
-            <h2>Mi Note 11 Pro</h2>
+            <h2>APC Schneider UPS</h2>
             <p>
               Brand: <span>Ziaomi</span>
+            </p>
+            <p>
+              Decsription: <span>APC Smart UPS is for uninterruptible power supply protection and management solutions. This UPS power supply provides protection from power surges, load shedding and unpredictable weather conditions during dialysis in the home or facility.</span>
             </p>
             <p>
               Rated: <span> (50)</span>

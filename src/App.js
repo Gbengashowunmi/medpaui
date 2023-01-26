@@ -9,6 +9,7 @@ import About from "./Pages/About";
 import ScrollToTopNav from "./component/ScrollToTopNav";
 import Shop from "./Pages/shop/Shop";
 import ProductDetail from "./Pages/ProductDetails/ProductDetail";
+import Service from "./Pages/service/Service";
   
 AOS.init();
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="about" element={<About/>}></Route>
         <Route path="shop" element={<Shop/>}></Route>
         <Route path="details" element={<ProductDetail/>}></Route>
+        <Route path="service" element={<Service/>}></Route>
       </Routes>
 
       </BrowserRouter>
