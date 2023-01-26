@@ -12,6 +12,7 @@ import {
 } from "react-icons/fa";
 import { MdEmail, MdLocationPin } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
+import { Button } from "@mui/material";
 
 export default function HeadFoot({ children }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,8 +62,11 @@ export default function HeadFoot({ children }) {
           <li>Service</li>
           <li>Our Blog</li>
           <li>MGTP</li>
-
-          <button className="appointment-btn">APPOINTMENTS </button>
+          <Button
+           variant="contained" className="appointment-btn">
+            APPOINTMENT
+          </Button>
+         
         </ul>
       </header>
       {children}
