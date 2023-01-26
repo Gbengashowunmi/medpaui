@@ -16,11 +16,11 @@
     width: 100%;
     // border: 2px solid red;
     height: 55%;
-padding: 0 12% ;
+padding: 0  ;
     img {
         width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
     }
   }
 
@@ -31,13 +31,14 @@ padding: 0 12% ;
 height: 40%;
 display: flex;
 flex-direction: column;
-justify-content: center;
+justify-content: space-between;
 // border: 2px solid blue;
 .item-name {
-  font-weight: 600;
+  font-weight: 400;
   // border: 2px solid red;
   margin: 0;
-
+  font-size: 90%;
+height: 50%;
 }
 .ratings {
   color: rgb(206, 24, 10);
@@ -48,9 +49,6 @@ justify-content: center;
 .price {
   color: rgb(124, 5, 5);
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   // border: 2px solid red;
   margin: 0;
   .add-to-cart {
@@ -90,21 +88,21 @@ justify-content: center;
 
 }
 
-@media (max-width:900px) {
+@media (max-width:1024px) {
   .item_container {
     height: 350px;
     padding: 5px 10px;
     gap: 10px;
     .image{
       width: 100%;
-      height: 45%;
-  // padding: 0 12% ;
+      height: 55%;
+  padding: 0 ;
     }
-    .description{
-      .price{
-        margin-bottom: 5px;
-      }
-    }
+  //   .description{
+  //     .price{
+  //       margin-bottom: 5px;
+  //     }
+  //   }
   }
 }
 @media (max-width:650px) {
@@ -113,31 +111,31 @@ justify-content: center;
     padding: 5px 10px;
     gap: 10px;
     .image{
-      width: 100%;
-      height: 55%;
+      width: 80%;
+      height: 60%;
   padding: 0  ;
     }
-    .description{
-      .price{
-        margin-bottom: 5px;
-      }
-    }
+  //   .description{
+  //     .price{
+  //       margin-bottom: 5px;
+  //     }
+  //   }
   }
 }
 @media (max-width:550px) {
   .item_container {
-    height: 400px;
+    // height: 400px;
     padding: 10px 30px;
     gap: 10px;    
-    .image{
-      width: 100%;
-      height: 65%;
-  padding: 0;
-    }
-    .description{
-      .price{
-        margin-bottom: 5px;
-      }
-    }
+  //   .image{
+  //     width: 100%;
+  //     height: 65%;
+  // padding: 0;
+  //   }
+  //   .description{
+  //     .price{
+  //       margin-bottom: 5px;
+  //     }
+  //   }
   }
 }
