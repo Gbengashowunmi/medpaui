@@ -106,6 +106,9 @@
 }
 
 @media (max-width: 990px) {
+  .slick-list .item {
+    padding: 0 1.5rem;
+  }
     .slick-list .carousel-item {
       height: 25rem;
       margin-bottom: 1rem;
@@ -125,6 +128,9 @@
 }
 
 @media (max-width: 550px) {
+  .slick-list .item {
+    padding: 0 1rem;
+  }
     .slick-list .carousel-item {
       height: 18rem;
     }
