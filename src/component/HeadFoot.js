@@ -59,7 +59,7 @@ export default function HeadFoot({ children }) {
             <li>About</li>
           </NavLink>
          <NavLink to="/shop"> <li>Shop</li></NavLink>
-          <li>Service</li>
+         <NavLink to="/service"><li>Service</li> </NavLink>
           <li>Our Blog</li>
           <li>MGTP</li>
           <Button
@@ -125,10 +125,12 @@ export default function HeadFoot({ children }) {
                 About Us
               </li>
             </NavLink>
+         <NavLink to="/service">
             <li>
               <FaChevronRight />
               Our Services
             </li>
+           </NavLink>
            <NavLink to="/shop"> <li>
               <FaChevronRight />
               Shop
