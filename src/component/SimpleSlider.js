@@ -6,7 +6,7 @@ import ProductCard from "./productCard/ProductCard";
 // import ProductCard from "./productCard/ProductCard";
 export default function SimpleSlider() {
   var settings = {
-    dots: true,
+    // dots: true,
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
