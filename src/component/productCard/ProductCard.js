@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "./productCard.scss";
 export default function ProductCard({ image, productName }) {
   return (
-    <Link to="/details">
       <div className="product-container">
       <div className="sale">
             <p>SALE!</p>
@@ -12,9 +11,11 @@ export default function ProductCard({ image, productName }) {
           <img src={image} alt="product-pics" />
           
 
+    <Link to="/details">
           <div className="add-to-cart">
             <p>Read More</p>
           </div>
+          </Link>
         </div>
         <div className="caption">
           <h5 className="product-name">{productName}</h5>
@@ -23,6 +24,5 @@ export default function ProductCard({ image, productName }) {
           </p>
         </div>
       </div>
-    </Link>
   );
 }
