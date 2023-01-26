@@ -11,11 +11,11 @@ export default function ProductCard({ image, productName }) {
           <img src={image} alt="product-pics" />
           
 
-    <Link to="/details">
           <div className="add-to-cart">
+    <Link to="/details">
             <p>Read More</p>
-          </div>
           </Link>
+          </div>
         </div>
         <div className="caption">
           <h5 className="product-name">{productName}</h5>

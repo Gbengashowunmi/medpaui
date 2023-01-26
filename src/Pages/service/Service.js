@@ -23,14 +23,14 @@ export default function Service() {
             data-aos-mirror="true"
             data-aos-once="false"
           >
-            <h2>About Us</h2>
+            <h2>Our Service</h2>
             <p>
               <MdOutlineHome />
               <NavLink to="/">
                 <span>HOME</span>
               </NavLink>{" "}
               <FaChevronRight />
-              <span className="active">ABOUT US</span>
+              <span className="active">OOU SERVICE</span>
             </p>
           </div>
         </div>

@@ -256,9 +256,9 @@ transition:0.6s
   .featured-post,
   .new-arrivals {
     .products-container {
-      // grid-template-columns: 1fr 1fr;
-      // column-gap: 0.6rem;
-      // row-gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 0.6rem;
+      row-gap: 2rem;
     }
   }
 }
