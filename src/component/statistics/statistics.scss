@@ -17,8 +17,6 @@
   .stat-container {
     width: 100%;
     min-height: 100px;
-    background-color: white;
-    display: flex;
     background-color: var(--clr-primary);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -40,7 +38,7 @@
     .stat-container {
       grid-template-columns: 1fr 1fr;
       .each-stat {
-        padding: 10px;
+        // padding: 10px;
       }
     }
   }
