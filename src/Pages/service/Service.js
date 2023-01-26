@@ -30,12 +30,11 @@ export default function Service() {
                 <span>HOME</span>
               </NavLink>{" "}
               <FaChevronRight />
-              <span className="active">OOU SERVICE</span>
+              <span className="active">OUR SERVICE</span>
             </p>
           </div>
         </div>
       </div>
-
 
       <section className="services">
         <h4 className="light-blue-bg-text head">OUR SERVICES</h4>
@@ -56,7 +55,6 @@ export default function Service() {
           />
         </div>
       </section>
-
     </HeadFoot>
   );
 }

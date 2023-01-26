@@ -120,7 +120,8 @@ export default function LandingPage() {
               Our qualified Service Engineers offer predictable maintenance and
               after sales support services
             </p>
-            <button className="read-more">READ MORE</button>
+           <Link to="/service"> <button className="read-more">READ MORE</button>
+           </Link>
           </div>
         </div>
         <div
@@ -142,7 +143,8 @@ export default function LandingPage() {
               Our qualified Service Engineers offer predictable maintenance and
               after sales support services
             </p>
-            <button className="read-more">READ MORE</button>
+            <Link to="/service"> <button className="read-more">READ MORE</button>
+            </Link>
           </div>
         </div>
       </section>
