@@ -51,7 +51,7 @@ export default function ProductDetail() {
             </p>
             <h4 className="price">$1135.00</h4>
             <p>Stock Available</p>
-            <Link to="//https://api.whatsapp.com/send?phone=15551234567"  target="_blank"><Button variant="contained" className="addtocart-btn">
+            <Link to="//api.whatsapp.com/send?phone=15551234567"  target="_blank"><Button variant="contained" className="addtocart-btn">
               Place Order
             </Button>
             </Link>
