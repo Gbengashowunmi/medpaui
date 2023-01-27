@@ -42,13 +42,13 @@ export default function ReviewSlider() {
         <Reviews review="Medpau really saves me time and effort. They are exactly what our business has been lacking. Wow, what great service!" reviewer="Handy Kali" reviewerWork="" />
       </div>
       <div className="item">
-        <Reviews review="We have used been with MedPau for the last three years. And all we can say is, they are the best in the industry." reviewer="Samuel Umahi" reviewerWork="CEO" />
+        <Reviews review="We have patronised MedPau since the last three years. And all we can say is, they are the best in the industry." reviewer="Samuel Umahi" reviewerWork="CEO" />
       </div>
       <div className="item">
-        <Reviews review="Your team is great. They are truly outstanding and understand the equipment 100%. It's worth doing business with you." reviewer="Charity Adele" reviewerWork="" />
+        <Reviews review="Your team is great. They are truly outstanding and understand the equipment 100%. It's worth doing business with you." reviewer="Love Grace" reviewerWork="" />
       </div>
       <div className="item">
-        <Reviews review="We have used been with MedPau for the last three years. And all we can say is, they are the best in the industry." reviewer="Samuel Umahi" reviewerWork="CEO" />
+        <Reviews review="We have patronised MedPau since the last three years. And all we can say is, they are the best in the industry." reviewer="Samuel Umahi" reviewerWork="CEO" />
       </div>
      
     </Slider>
