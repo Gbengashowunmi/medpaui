@@ -45,7 +45,15 @@ export default function HeadFoot({ children }) {
       ></div>
       <header className="nav">
         <div className="comapany-icon">
-          <div className="logo"> <Link to="/"><img src="/images/WhatsApp_Image_2023-01-23_at_9.13.05_AM-removebg-preview.png" alt="logo" /></Link> </div> 
+          <div className="logo">
+            {" "}
+            <Link to="/">
+              <img
+                src="/images/WhatsApp_Image_2023-01-23_at_9.13.05_AM-removebg-preview.png"
+                alt="logo"
+              />
+            </Link>{" "}
+          </div>
 
           <div onClick={handleToggle}>
             <HiMenuAlt3 className={`nav-bar ${isOpen ? "white" : ""}`} />
@@ -58,15 +66,18 @@ export default function HeadFoot({ children }) {
           <NavLink to="/about">
             <li>About</li>
           </NavLink>
-         <NavLink to="/shop"> <li>Shop</li></NavLink>
-         <NavLink to="/service"><li>Service</li> </NavLink>
+          <NavLink to="/shop">
+            {" "}
+            <li>Shop</li>
+          </NavLink>
+          <NavLink to="/service">
+            <li>Service</li>{" "}
+          </NavLink>
           <li>Our Blog</li>
           <li>MGTP</li>
-          <Button
-           variant="contained" className="appointment-btn">
+          <Button variant="contained" className="appointment-btn">
             APPOINTMENT
           </Button>
-         
         </ul>
       </header>
       {children}
@@ -88,19 +99,29 @@ export default function HeadFoot({ children }) {
             quality of life. Professionalism.
           </p>
           <ul>
-            <li>
-              <FaFacebookF />
-            </li>
-            <li>
-              <FaGooglePlusG />
-            </li>
-          <Link to="//linkedin.com/company/medpau/" target="_blank">  <li>
-              <FaLinkedinIn />
-            </li>
+            <Link to="//www.facebook.com/Medpau1" target="_blank">
+              <li>
+                <FaFacebookF />
+              </li>
             </Link>
-            <li>
-              <FaTwitter />
-            </li>
+            <Link to="//Info@medpau.net" target="_blank">
+              <li>
+                <FaGooglePlusG />
+              </li>
+            </Link>
+            <Link to="//linkedin.com/company/medpau/" target="_blank">
+              <li>
+                <FaLinkedinIn />
+              </li>
+            </Link>
+            <Link
+              to="//twitter.com/medpauintl?s=11&t=zBroa9mFl_fitJFK1HbUcQ"
+              target="_blank"
+            >
+              <li>
+                <FaTwitter />
+              </li>
+            </Link>
           </ul>
         </div>
         <div
@@ -125,16 +146,18 @@ export default function HeadFoot({ children }) {
                 About Us
               </li>
             </NavLink>
-         <NavLink to="/service">
-            <li>
-              <FaChevronRight />
-              Our Services
-            </li>
-           </NavLink>
-           <NavLink to="/shop"> <li>
-              <FaChevronRight />
-              Shop
-            </li>
+            <NavLink to="/service">
+              <li>
+                <FaChevronRight />
+                Our Services
+              </li>
+            </NavLink>
+            <NavLink to="/shop">
+              {" "}
+              <li>
+                <FaChevronRight />
+                Shop
+              </li>
             </NavLink>
             <li>
               <FaChevronRight />
@@ -180,12 +203,16 @@ export default function HeadFoot({ children }) {
             <hr />
           </div>
           <ul>
+            <a href="tel:+2349085323596">
             <li>
-              <FaPhone /> <span>+234805 6666700</span>
+              <FaPhone /> <span>+234908 532 3596</span>
             </li>
+            </a>
+            <a href="mailto:Info@medpau.net">
             <li>
               <MdEmail /> <span>Info@medpau.net</span>
             </li>
+            </a>
             <li>
               <MdLocationPin />{" "}
               <span>

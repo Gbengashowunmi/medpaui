@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import Carousel from "../component/Carousel";
 import CenterSlider from "../component/CenterSlider";
 import HeadFoot from "../component/HeadFoot";
-import Reviews from "../component/reviews/Reviews";
 import ReviewSlider from "../component/reviews/ReviewSlider";
-
 import SimpleSlider from "../component/SimpleSlider";
 import Statistics from "../component/statistics/Statistics";
 import "./landing.scss";
@@ -59,7 +57,8 @@ export default function LandingPage() {
             data-aos-once="false"
           >
             <h3>Have a complain?</h3>
-            <button>Contact our Engineers</button>
+           <Link to="//forms.gle/aJKSaxz2xyfbnQFy5"> <button>Contact our Engineers</button>
+           </Link>
           </div>
         </div>
       </div>
