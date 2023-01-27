@@ -104,11 +104,11 @@ export default function HeadFoot({ children }) {
                 <FaFacebookF />
               </li>
             </Link>
-            <Link to="//Info@medpau.net" target="_blank">
+            <a href="mailto:Info@medpau.net">
               <li>
                 <FaGooglePlusG />
               </li>
-            </Link>
+            </a>
             <Link to="//linkedin.com/company/medpau/" target="_blank">
               <li>
                 <FaLinkedinIn />
