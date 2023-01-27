@@ -56,7 +56,7 @@ export default function LandingPage() {
             data-aos-mirror="true"
             data-aos-once="false"
           >
-            <h3>Have a complain?</h3>
+            <h3>Have a technical complain?</h3>
            <Link to="//forms.gle/aJKSaxz2xyfbnQFy5"> <button>Contact our Engineers</button>
            </Link>
           </div>
