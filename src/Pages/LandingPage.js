@@ -15,6 +15,7 @@ export default function LandingPage() {
       </main>
       <div className="hero-card-wrapper">
         <img src="/images/background_image_02.jpg" alt="card" />
+        <div className="overlay"></div>
         <div className="hero-cards">
           <div
             className="hero-card"
