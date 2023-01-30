@@ -9,7 +9,7 @@
         text-align: left;
 h2, h5{
     color: var(--clr-secondary);
-    border-bottom: 2px solid var(--clr-primary);
+    // border-bottom: 2px solid var(--clr-primary);
     width: fit-content;
     padding: 0 1.1rem;
     
@@ -53,5 +53,6 @@ ul{
         margin: 1rem auto;
         position: relative;
 
+        
     }
 }
