@@ -37,6 +37,9 @@ ul{
         hr{
             background-color: var(--clr-white);
         }
+        li{
+            list-style: none;
+        }
         .appointment-btn{
             background-color: var(--clr-primary);
             color: var(--clr-white);

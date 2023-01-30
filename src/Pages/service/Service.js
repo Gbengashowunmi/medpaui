@@ -97,7 +97,7 @@ export default function Service() {
             </li>
             </a>
 
-            <Link to="//forms.gle/aJKSaxz2xyfbnQFy5"> <Button className="appointment-btn">
+            <Link to="//forms.gle/aJKSaxz2xyfbnQFy5" target="blank"> <Button className="appointment-btn">
             APPOINTMENT
           </Button>
           </Link>

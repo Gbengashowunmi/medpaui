@@ -2,13 +2,13 @@ import React from "react";
 import { FaChevronRight, FaPhone } from "react-icons/fa";
 import { MdOutlineHome } from "react-icons/md";
 import { NavLink } from "react-router-dom";
-import HeadFoot from "../component/HeadFoot";
-import ChooseUsCard from "../component/chooseUsCard/ChooseUsCard";
-import OurServices from "../component/ourServices/OurServices";
-import ReviewSlider from "../component/reviews/ReviewSlider";
-import Statistics from "../component/statistics/Statistics";
+import HeadFoot from "../../component/HeadFoot";
+import ChooseUsCard from "../../component/chooseUsCard/ChooseUsCard";
+import OurServices from "../../component/ourServices/OurServices";
+import ReviewSlider from "../../component/reviews/ReviewSlider";
+import Statistics from "../../component/statistics/Statistics";
 import "./about.scss";
-import TeamSlide from "../component/teamMember/TeamSlide";
+import TeamSlide from "../../component/teamMember/TeamSlide";
 
 export default function About() {
   return (

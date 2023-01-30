@@ -5,12 +5,12 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./Pages/LandingPage";
-import About from "./Pages/About";
 import ScrollToTopNav from "./component/ScrollToTopNav";
 import Shop from "./Pages/shop/Shop";
 import ProductDetail from "./Pages/ProductDetails/ProductDetail";
 import Service from "./Pages/service/Service";
 import Faq from "./Pages/FAQ/Faq";
+import About from "./Pages/about/About";
   
 AOS.init();
 function App() {
