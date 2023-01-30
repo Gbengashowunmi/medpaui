@@ -64,7 +64,7 @@ export default function About() {
             24/7 online support. Our partnership with global brands and
             world-leading medical equipment manufacturers to meet our
             obligations is indeed one way in which our lasting impact in this
-            forever revolutionary course has been measured <span>...Read More</span>
+            forever revolutionary course has been measured.
            
           </p>
 
@@ -85,7 +85,9 @@ export default function About() {
           </ul>
           <p className="blue-text">Do you have any question?</p>
           <h4>
+          <a href="tel:+2349085323596">
             <FaPhone /> <span>+234805 6666700 </span>
+            </a>
           </h4>
         </div>
       </aside>
@@ -124,6 +126,8 @@ export default function About() {
         </div>
       </section>
       <section className="team-wrapper">
+      <h4 className="light-blue-bg-text head">The Team</h4>
+        
         <TeamSlide/>
       </section>
 

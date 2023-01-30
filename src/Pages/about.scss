@@ -140,7 +140,6 @@ p{
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 1rem;
     row-gap: 1rem;
-    margin: 2rem;
     
   }
 }
@@ -148,6 +147,11 @@ p{
 .team-wrapper{
   padding: 4rem 2rem;
   background-color: var(--clr-background-grey);
+  // text-align: center;
+  .head{
+    margin: auto;
+    margin-bottom: 1rem;
+  }
 }
 .reviews {
   padding: 2rem 0;
