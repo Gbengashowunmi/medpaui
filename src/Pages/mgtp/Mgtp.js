@@ -1,11 +1,8 @@
-import { Button } from "@mui/material";
 import React from "react";
-import { FaChevronRight, FaPhone } from "react-icons/fa";
-import { MdEmail, MdOutlineHome } from "react-icons/md";
-import { Link, NavLink } from "react-router-dom";
+import { FaChevronRight } from "react-icons/fa";
+import { MdOutlineHome } from "react-icons/md";
+import { NavLink } from "react-router-dom";
 import HeadFoot from "../../component/HeadFoot";
-import OurServices from "../../component/ourServices/OurServices";
-import "./service.scss"
 
 export default function Mgtp() {
   return (
@@ -25,7 +22,7 @@ export default function Mgtp() {
             data-aos-mirror="true"
             data-aos-once="false"
           >
-            <h2>Our Service</h2>
+            <h2>MGTP</h2>
             <p>
               <MdOutlineHome />
               <NavLink to="/">

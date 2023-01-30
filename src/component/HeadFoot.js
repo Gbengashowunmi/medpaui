@@ -73,7 +73,9 @@ export default function HeadFoot({ children }) {
             <li>Service</li>
           </NavLink>
           <li>Our Blog</li>
+          <NavLink to="/mgtp">
           <li>MGTP</li>
+          </NavLink>
           <Button variant="contained" className="appointment-btn">
             APPOINTMENT
           </Button>
