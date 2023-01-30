@@ -67,11 +67,10 @@ export default function HeadFoot({ children }) {
             <li>About</li>
           </NavLink>
           <NavLink to="/shop">
-            {" "}
             <li>Shop</li>
           </NavLink>
           <NavLink to="/service">
-            <li>Service</li>{" "}
+            <li>Service</li>
           </NavLink>
           <li>Our Blog</li>
           <li>MGTP</li>

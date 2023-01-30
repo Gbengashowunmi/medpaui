@@ -1,7 +1,8 @@
+import { Button } from "@mui/material";
 import React from "react";
-import { FaChevronRight } from "react-icons/fa";
-import { MdOutlineHome } from "react-icons/md";
-import { NavLink } from "react-router-dom";
+import { FaChevronRight, FaPhone } from "react-icons/fa";
+import { MdEmail, MdOutlineHome } from "react-icons/md";
+import { Link, NavLink } from "react-router-dom";
 import HeadFoot from "../../component/HeadFoot";
 import OurServices from "../../component/ourServices/OurServices";
 import "./service.scss"
@@ -40,6 +41,7 @@ export default function Service() {
 
       <div className="technical_details">
           <div className="left">
+            <h2>Technical Service</h2> 
             <p>
               Medpau offer various technical services for medical equipment. We
               have expert technicians that handle everything from maintenance,
@@ -55,12 +57,12 @@ export default function Service() {
               for the repair and maintenance of your medical devices.
             </p>
             <ul>
-              OUR SERVICES INCLUDE:
+             <h5> Our services include:</h5>
               <li>Preventive Maintenance</li>
               <li>Corrective Maintenance</li>
               <li>Repairs</li>
             </ul>
-            OUR SMART SOLUTIONS BENEFIT OUR CLIENTS BY:
+            <h5> Our smart solutins benefit our clients by:</h5>
             <ul>
               <li>Minimizing Equipment Downtime And The Cost Implication</li>
               <li>
@@ -81,7 +83,25 @@ export default function Service() {
             </ul>
           </div>
 
-          <div className="right"></div>
+          <div className="right">
+            <h3>Reach our technical support team today</h3>
+<hr/>
+            <a href="tel:+2349085323596">
+            <li>
+              <FaPhone /> <span>+234908 532 3596</span>
+            </li>
+            </a>
+            <a href="mailto:Info@medpau.net">
+            <li>
+              <MdEmail /> <span>Info@medpau.net</span>
+            </li>
+            </a>
+
+            <Link to="//forms.gle/aJKSaxz2xyfbnQFy5"> <Button className="appointment-btn">
+            APPOINTMENT
+          </Button>
+          </Link>
+          </div>
         </div>
 
       <section className="services">
