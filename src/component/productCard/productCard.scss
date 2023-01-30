@@ -60,7 +60,12 @@ justify-content: center;
     width: 100%;
     height: 40%;
     // border: 2px solid hotpink;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--clr-secondary);
     padding: 0;
+    text-align: left;
     .product-name{
         height: 65%;
         width: 100%;

@@ -71,7 +71,8 @@ export default function Shop() {
           <div className="header">
             <h3>
               <IoIosFlash className="icon" />
-              Flash
+              HEMODIALYSIS 
+MACHINES
             </h3>
             <button>
               <p>
@@ -87,7 +88,7 @@ export default function Shop() {
         <div className="header">
             <h3>
               <BiCategory className="icon" />
-              Top Ratings
+              ICU EQUIPMENTS
             </h3>
             <button>
               <p>
@@ -113,7 +114,103 @@ export default function Shop() {
           <div className="header">
             <h3>
               <BsGiftFill className="icon" />
-              Big Discount
+              Diagnostic Imaging Equipment
+            </h3>
+            <button>
+              <p>
+                View all <BsForwardFill className="icon" />
+              </p>
+            </button>
+          </div>
+        <div className="item-cards">
+        <div className="item">
+        <ItemCard image="/images/product-images/equipment01.jpg" productName="MRI" />
+      </div>
+      <div className="item">
+        <ItemCard image="/images/product-images/equipment02.jpg" productName="CT" />
+      </div>
+      <div className="item">
+        <ItemCard image="/images/product-images/equipment03.jpg" productName="Ultrasound" />
+      </div>
+      <div className="item">
+        <ItemCard image="/images/product-images/equipment04.png" productName="Radiography e.g X-ray machine"/>
+      </div>
+      {/* <div className="item">
+        <ItemCard image="/images/product-images/equipment05.png" productName="Ceiling-mounted surgical light – PG EYES" />
+      </div>
+      <div className="item">
+        <ItemCard image="/images/product-images/equipment06.jpg" productName="Defibrillator – RESCUE LIFE 7″ DISPLAY VERSION"/>
+      </div>
+      <div className="item">
+        <ItemCard image="/images/product-images/equipment07.png" productName="Dräger Primus® Anesthesia Machine"/>
+      </div>
+      <div className="item">
+        <ItemCard image="/images/product-images/equipment08.jpg" productName="Extracorporeal Blood Circuit for Blood Purification"/>
+      </div>
+      <div className="item">
+        <ItemCard image="/images/product-images/equipment09.jpg" productName="Fresenius 4008S classix Dialysis Machine "/>
+      </div>
+      <div className="item">
+        <ItemCard image="/images/product-images/equipment10.jpg" productName="GE Aespire S5 Anesthesia Machine with 7900 Smartvent "/>
+      </div>
+      <div className="item">
+        <ItemCard image="/images/product-images/equipment11.png" productName="GE/Datex Ohmeda 5/7900 Anesthesia machine"/>
+      </div> */}
+          </div>
+          </div>
+        <div className="flash">
+          <div className="header">
+            <h3>
+              <BsGiftFill className="icon" />
+              Operating Theatre Equipment
+            </h3>
+            <button>
+              <p>
+                View all <BsForwardFill className="icon" />
+              </p>
+            </button>
+          </div>
+        <div className="item-cards">
+        <div className="item">
+        <ItemCard image="/images/product-images/equipment01.jpg" productName="Anesthesia Machine" />
+      </div>
+      <div className="item">
+        <ItemCard image="/images/product-images/equipment02.jpg" productName="Operating table" />
+      </div>
+      <div className="item">
+        <ItemCard image="/images/product-images/equipment03.jpg" productName="Operating light " />
+      </div>
+      {/* <div className="item">
+        <ItemCard image="/images/product-images/equipment04.png" productName="BLUE GATE UPS"/>
+      </div>
+      <div className="item">
+        <ItemCard image="/images/product-images/equipment05.png" productName="Ceiling-mounted surgical light – PG EYES" />
+      </div>
+      <div className="item">
+        <ItemCard image="/images/product-images/equipment06.jpg" productName="Defibrillator – RESCUE LIFE 7″ DISPLAY VERSION"/>
+      </div>
+      <div className="item">
+        <ItemCard image="/images/product-images/equipment07.png" productName="Dräger Primus® Anesthesia Machine"/>
+      </div>
+      <div className="item">
+        <ItemCard image="/images/product-images/equipment08.jpg" productName="Extracorporeal Blood Circuit for Blood Purification"/>
+      </div>
+      <div className="item">
+        <ItemCard image="/images/product-images/equipment09.jpg" productName="Fresenius 4008S classix Dialysis Machine "/>
+      </div>
+      <div className="item">
+        <ItemCard image="/images/product-images/equipment10.jpg" productName="GE Aespire S5 Anesthesia Machine with 7900 Smartvent "/>
+      </div>
+      <div className="item">
+        <ItemCard image="/images/product-images/equipment11.png" productName="GE/Datex Ohmeda 5/7900 Anesthesia machine"/>
+      </div> */}
+          </div>
+          </div>
+        <div className="flash">
+          <div className="header">
+            <h3>
+              <BsGiftFill className="icon" />
+              Diagnostic Imaging Equipment
             </h3>
             <button>
               <p>
@@ -157,6 +254,9 @@ export default function Shop() {
       </div>
           </div>
           </div>
+
+
+
         <section
           className="short-message-wrapper"
           data-aos="zoom-in-right"

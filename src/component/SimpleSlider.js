@@ -46,28 +46,34 @@ export default function SimpleSlider() {
       <div className="item">
         <ProductCard
           image="/images/product-images/equipment01.jpg"
-          productName="APC Schneider UPS"
+          productName="Ventilators"
         />
       </div>
       <div className="item">
         <ProductCard
           image="/images/product-images/equipment02.jpg"
-          productName="Automatic Dialysis Couch"
+          productName="Patient Monitor"
         />
       </div>
       <div className="item">
         <ProductCard
           image="/images/product-images/equipment03.jpg"
-          productName="Automatic External Defibrillator - RESCUE Sam"
+          productName="Defibrillator"
         />
       </div>
       <div className="item">
         <ProductCard
           image="/images/product-images/equipment04.png"
-          productName="BLUE GATE UPS"
+          productName="Infusion pump"
         />
       </div>
       <div className="item">
+        <ProductCard
+          image="/images/product-images/equipment01.jpg"
+          productName="Ventilators"
+        />
+      </div>
+      {/* <div className="item">
         <ProductCard
           image="/images/product-images/equipment05.png"
           productName="Ceiling-mounted surgical light – PG EYES"
@@ -108,7 +114,7 @@ export default function SimpleSlider() {
           image="/images/product-images/equipment11.png"
           productName="GE/Datex Ohmeda 5/7900 Anesthesia machine"
         />
-      </div>
+      </div> */}
     </Slider>
   );
 }

@@ -9,48 +9,66 @@ export default function CenterSlider() {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-        responsive: [
+    responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: false
-        }
+          dots: false,
+        },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2
-        }
+          initialSlide: 2,
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <Slider {...settings}>
- <div className="item">
-        <ProductCard image="/images/product-images/equipment01.jpg" productName="APC Schneider UPS" />
+      <div className="item">
+        <ProductCard
+          image="/images/product-images/equipment01.jpg"
+          productName="Dialysis machines: Fresenius 4008s Classix, Nikkiso DBB-07"
+        />
       </div>
       <div className="item">
-        <ProductCard image="/images/product-images/equipment02.jpg" productName="Automatic Dialysis Couch" />
+        <ProductCard
+          image="/images/product-images/equipment02.jpg"
+          productName="Dialysis chair: Automatic and Manual "
+        />
       </div>
       <div className="item">
-        <ProductCard image="/images/product-images/equipment03.jpg" productName="Automatic External Defibrillator - RESCUE Sam" />
+        <ProductCard
+          image="/images/product-images/equipment03.jpg"
+          productName="Water treatment system"
+        />
       </div>
       <div className="item">
-        <ProductCard image="/images/product-images/equipment04.png" productName="BLUE GATE UPS"/>
+        <ProductCard
+          image="/images/product-images/equipment04.png"
+          productName="Renal Function Kit"
+        />
       </div>
       <div className="item">
+        <ProductCard
+          image="/images/product-images/equipment01.jpg"
+          productName="Dialysis machines: Fresenius 4008s Classix, Nikkiso DBB-07"
+        />
+      </div>
+      {/* <div className="item">
         <ProductCard image="/images/product-images/equipment05.png" productName="Ceiling-mounted surgical light – PG EYES" />
       </div>
       <div className="item">
@@ -70,8 +88,7 @@ export default function CenterSlider() {
       </div>
       <div className="item">
         <ProductCard image="/images/product-images/equipment11.png" productName="GE/Datex Ohmeda 5/7900 Anesthesia machine"/>
-      </div>
-     
+      </div> */}
     </Slider>
   );
 }

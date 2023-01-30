@@ -1,5 +1,5 @@
 .item_container {
-  height: 400px;
+  height: 300px;
   padding: 10px 20px;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@
   cursor: pointer;
   .image{
     width: 100%;
-    height: 55%;
+    height: 65%;
 padding: 0  ;
     img {
         width: 100%;
@@ -27,7 +27,7 @@ padding: 0  ;
     text-align: left;
     width: 100%;
     padding: 0;
-height: 40%;
+height: 25%;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
@@ -37,7 +37,7 @@ justify-content: space-between;
   // border: 2px solid red;
   margin: 0;
   font-size: 90%;
-height: 50%;
+height: 70%;
 }
 .ratings {
   color: rgb(206, 24, 10);
@@ -100,24 +100,24 @@ height: 50%;
 
 @media (max-width:1024px) {
   .item_container {
-    height: 350px;
+    height: 300px;
     padding: 5px 10px;
     gap: 10px;
     .image{
       width: 100%;
-      height: 55%;
+      height: 65%;
   padding: 0 ;
     }
   }
 }
 @media (max-width:650px) {
   .item_container {
-    height: 350px;
+    height: 300px;
     padding: 5px 10px;
     gap: 10px;
     .image{
       width: 80%;
-      height: 60%;
+      height: 65%;
   padding: 0  ;
     }
   //   .description{
