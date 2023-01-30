@@ -163,10 +163,12 @@ export default function HeadFoot({ children }) {
               <FaChevronRight />
               Events
             </li>
+            <NavLink to="/faq">
             <li>
               <FaChevronRight />
               FAQ
             </li>
+            </NavLink>
             <li>
               <FaChevronRight />
               Our process
