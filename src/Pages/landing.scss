@@ -27,7 +27,7 @@ main {
   }
   .overlay{
     background:rgba(0, 0, 255, 0.295);
-    z-index: 1;
+    z-index: 0;
 
   }
   .hero-cards {
@@ -39,7 +39,7 @@ main {
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
     .hero-card {
-    z-index: 2;
+    // z-index: 2;
 border: 1px solid var(--clr-secondary);
       border-radius: 10px;
       box-shadow: inset 4px 4px 5px 0 rgba(255, 255, 255, 0.829),
