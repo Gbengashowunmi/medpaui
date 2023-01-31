@@ -2,6 +2,7 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { BiCategory } from "react-icons/bi";
 import { IoIosFlash } from "react-icons/io";
+import Button from '@mui/material/Button';
 
 import { BsCart4, BsForwardFill, BsGiftFill, BsSearch } from "react-icons/bs";
 import { RiAccountPinCircleFill } from "react-icons/ri";
@@ -44,11 +45,22 @@ export default function Shop() {
         </div>
       </div>
       <div className="top">
+        <div className="cat_dropdown">
         <button>
           {" "}
           <BiCategory className="icon" />
           CATEGORIES
         </button>
+
+        <ul className="ul">
+    <li>Hemodialysis Machines</li>
+    <li>ICU Equipment</li>
+    <li>Operating Theatre Equipment</li>
+    <li>Diagnostic Imaging Equipment</li>
+    <li>All consumables</li>
+    <li>Services</li>
+  </ul>
+        </div>
         <div className="search">
           <BsSearch className="search-icon" />
           <input placeholder="Type and hit enter" />
@@ -83,6 +95,15 @@ MACHINES
           <div className="products-container">
           <CenterSlider />
         </div>
+        <div className="header">
+            <h3>
+              <IoIosFlash className="icon" />
+              Hemodialysis Consumeables
+            </h3>
+          </div>
+          <div className="products-container">
+          {/* <CenterSlider /> */}
+        </div>
         </div>
         <div className="flash">
         <div className="header">
@@ -99,6 +120,12 @@ MACHINES
         <div className="products-container">
           <SimpleSlider />
         </div>
+        <div className="header">
+            <h3>
+              <IoIosFlash className="icon" />
+              ICU Consumeables
+            </h3>
+          </div>
         </div>
         <div className="sales-banner">
 
@@ -206,56 +233,6 @@ MACHINES
       </div> */}
           </div>
           </div>
-        <div className="flash">
-          <div className="header">
-            <h3>
-              <BsGiftFill className="icon" />
-              Diagnostic Imaging Equipment
-            </h3>
-            <button>
-              <p>
-                View all <BsForwardFill className="icon" />
-              </p>
-            </button>
-          </div>
-        <div className="item-cards">
-        <div className="item">
-        <ItemCard image="/images/product-images/equipment01.jpg" productName="APC Schneider UPS" />
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment02.jpg" productName="Automatic Dialysis Couch" />
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment03.jpg" productName="Automatic External Defibrillator - RESCUE Sam" />
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment04.png" productName="BLUE GATE UPS"/>
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment05.png" productName="Ceiling-mounted surgical light – PG EYES" />
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment06.jpg" productName="Defibrillator – RESCUE LIFE 7″ DISPLAY VERSION"/>
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment07.png" productName="Dräger Primus® Anesthesia Machine"/>
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment08.jpg" productName="Extracorporeal Blood Circuit for Blood Purification"/>
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment09.jpg" productName="Fresenius 4008S classix Dialysis Machine "/>
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment10.jpg" productName="GE Aespire S5 Anesthesia Machine with 7900 Smartvent "/>
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment11.png" productName="GE/Datex Ohmeda 5/7900 Anesthesia machine"/>
-      </div>
-          </div>
-          </div>
-
-
 
         <section
           className="short-message-wrapper"
