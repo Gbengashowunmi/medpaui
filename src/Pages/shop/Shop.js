@@ -15,6 +15,7 @@ import SimpleSlider from "../../component/SimpleSlider";
 import CenterSlider from "../../component/CenterSlider";
 import { MdOutlineHome } from "react-icons/md";
 import { FaChevronRight } from "react-icons/fa";
+import Consumeables from "../../component/consumeables/Consumeables";
 export default function Shop() {
   return (
     <HeadFoot>
@@ -101,8 +102,16 @@ MACHINES
               Hemodialysis Consumeables
             </h3>
           </div>
-          <div className="products-container">
-          {/* <CenterSlider /> */}
+          <div className="consumeables-container">
+         <div> <Consumeables/></div>
+         <div> <Consumeables/></div>
+         <div> <Consumeables/></div>
+         <div> <Consumeables/></div>
+         <div> <Consumeables/></div>
+         <div> <Consumeables/></div>
+         <div> <Consumeables/></div>
+         <div> <Consumeables/></div>
+         <div> <Consumeables/></div>
         </div>
         </div>
         <div className="flash">
