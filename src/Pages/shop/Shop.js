@@ -1,13 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { BiCategory } from "react-icons/bi";
 import { IoIosFlash } from "react-icons/io";
-import Button from '@mui/material/Button';
-
+import Button from "@mui/material/Button";
 import { BsCart4, BsForwardFill, BsGiftFill, BsSearch } from "react-icons/bs";
 import { RiAccountPinCircleFill } from "react-icons/ri";
 import "./shop.scss";
-
 import HeadFoot from "../../component/HeadFoot";
 import ItemCard from "../../component/ItemCard/ItemCard";
 import ShortMessage from "../../component/shortMessage/ShortMessage";
@@ -16,10 +14,20 @@ import CenterSlider from "../../component/CenterSlider";
 import { MdOutlineHome } from "react-icons/md";
 import { FaChevronRight } from "react-icons/fa";
 import Consumeables from "../../component/consumeables/Consumeables";
+
 export default function Shop() {
+
+  const [show, setShow] = useState("All")
+  
+    const handleClick = (category)=>{
+setShow(category)
+}
+console.log(show)
+
   return (
     <HeadFoot>
-            <div className="about-head">
+    
+      <div className="about-head">
         <div className="image">
           <div className="overlay"></div>
           <img src="/images/breadcrumb-image-1.jpg" alt="about-us" />
@@ -47,20 +55,20 @@ export default function Shop() {
       </div>
       <div className="top">
         <div className="cat_dropdown">
-        <button>
-          {" "}
-          <BiCategory className="icon" />
-          CATEGORIES
-        </button>
+          <button>
+            {" "}
+            <BiCategory className="icon" />
+            CATEGORIES
+          </button>
 
-        <ul className="ul">
-    <li>Hemodialysis Machines</li>
-    <li>ICU Equipment</li>
-    <li>Operating Theatre Equipment</li>
-    <li>Diagnostic Imaging Equipment</li>
-    <li>All consumables</li>
-    <li>Services</li>
-  </ul>
+          <ul className="ul">
+            <li onClick={()=>handleClick('Hemodialysis')}>Hemodialysis Machines</li>
+            <li onClick={()=>handleClick('ICU')}>ICU Equipment</li>
+            <li onClick={()=>handleClick('Operating Theatre ')}>Operating Theatre Equipment</li>
+            <li onClick={()=>handleClick('Diagnostic Imaging Equipment ')}>Diagnostic Imaging Equipment</li>
+            <li onClick={()=>handleClick('consumeables ')}>All consumables</li>
+            <li>Services</li>
+          </ul>
         </div>
         <div className="search">
           <BsSearch className="search-icon" />
@@ -80,12 +88,11 @@ export default function Shop() {
       </div>
 
       <main className="shop-main">
-        <div className="flash">
+        <div className="flash" hidden={show !== "Hemodialysis" }>
           <div className="header">
             <h3>
               <IoIosFlash className="icon" />
-              HEMODIALYSIS 
-MACHINES
+              HEMODIALYSIS MACHINES
             </h3>
             <button>
               <p>
@@ -94,28 +101,59 @@ MACHINES
             </button>
           </div>
           <div className="products-container">
-          <CenterSlider />
-        </div>
-        <div className="header">
+            <CenterSlider />
+          </div>
+          <div className="header">
             <h3>
               <IoIosFlash className="icon" />
               Hemodialysis Consumeables
             </h3>
           </div>
           <div className="consumeables-container">
-         <div> <Consumeables/></div>
-         <div> <Consumeables/></div>
-         <div> <Consumeables/></div>
-         <div> <Consumeables/></div>
-         <div> <Consumeables/></div>
-         <div> <Consumeables/></div>
-         <div> <Consumeables/></div>
-         <div> <Consumeables/></div>
-         <div> <Consumeables/></div>
+            <div>
+              {" "}
+              <Consumeables productName="Dialyzer" />
+            </div>
+            <div>
+              {" "}
+              <Consumeables productName="Bloodline" />
+            </div>
+            <div>
+              {" "}
+              <Consumeables productName="Acid concentrate" />
+            </div>
+            <div>
+              {" "}
+              <Consumeables productName="Fistula needle" />
+            </div>
+            <div>
+              {" "}
+              <Consumeables productName="Bicarbonate bag" />
+            </div>
+            <div>
+              {" "}
+              <Consumeables productName="Bicarbonate cartridge" />
+            </div>
+            <div>
+              {" "}
+              <Consumeables productName="Femoral catheter" />
+            </div>
+            <div>
+              {" "}
+              <Consumeables productName="Guide wire" />
+            </div>
+            <div>
+              {" "}
+              <Consumeables productName="Double Lumen catheter" />
+            </div>
+            <div>
+              {" "}
+              <Consumeables productName="Citrosteril" />
+            </div>
+          </div>
         </div>
-        </div>
-        <div className="flash">
-        <div className="header">
+        <div className="flash" hidden={show !== "All" }>
+          <div className="header">
             <h3>
               <BiCategory className="icon" />
               ICU EQUIPMENTS
@@ -126,27 +164,32 @@ MACHINES
               </p>
             </button>
           </div>
-        <div className="products-container">
-          <SimpleSlider />
-        </div>
-        <div className="header">
+          <div className="products-container">
+            <SimpleSlider />
+          </div>
+          <div className="header">
             <h3>
               <IoIosFlash className="icon" />
               ICU Consumeables
             </h3>
           </div>
+          <div className="consumeables-container">
+            <div>
+              {" "}
+              <Consumeables productName="Breathing Circuit" />
+            </div>
+          </div>
         </div>
         <div className="sales-banner">
-
           <div className="banner1"></div>
           <div className="banner2">
             <div className="image">
-            <img src="/images/sales.png" alt="banner2" />
+              <img src="/images/sales.png" alt="banner2" />
             </div>
           </div>
         </div>
 
-        <div className="flash">
+        <div className="flash" hidden={show !== "All"}>
           <div className="header">
             <h3>
               <BsGiftFill className="icon" />
@@ -158,20 +201,32 @@ MACHINES
               </p>
             </button>
           </div>
-        <div className="item-cards">
-        <div className="item">
-        <ItemCard image="/images/product-images/equipment01.jpg" productName="MRI" />
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment02.jpg" productName="CT" />
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment03.jpg" productName="Ultrasound" />
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment04.png" productName="Radiography e.g X-ray machine"/>
-      </div>
-      {/* <div className="item">
+          <div className="item-cards">
+            <div className="item">
+              <ItemCard
+                image="/images/product-images/equipment01.jpg"
+                productName="MRI"
+              />
+            </div>
+            <div className="item">
+              <ItemCard
+                image="/images/product-images/equipment02.jpg"
+                productName="CT"
+              />
+            </div>
+            <div className="item">
+              <ItemCard
+                image="/images/product-images/equipment03.jpg"
+                productName="Ultrasound"
+              />
+            </div>
+            <div className="item">
+              <ItemCard
+                image="/images/product-images/equipment04.png"
+                productName="Radiography e.g X-ray machine"
+              />
+            </div>
+            {/* <div className="item">
         <ItemCard image="/images/product-images/equipment05.png" productName="Ceiling-mounted surgical light – PG EYES" />
       </div>
       <div className="item">
@@ -193,8 +248,8 @@ MACHINES
         <ItemCard image="/images/product-images/equipment11.png" productName="GE/Datex Ohmeda 5/7900 Anesthesia machine"/>
       </div> */}
           </div>
-          </div>
-        <div className="flash">
+        </div>
+        <div className="flash" hidden={show !== "All"}>
           <div className="header">
             <h3>
               <BsGiftFill className="icon" />
@@ -206,17 +261,26 @@ MACHINES
               </p>
             </button>
           </div>
-        <div className="item-cards">
-        <div className="item">
-        <ItemCard image="/images/product-images/equipment01.jpg" productName="Anesthesia Machine" />
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment02.jpg" productName="Operating table" />
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment03.jpg" productName="Operating light " />
-      </div>
-      {/* <div className="item">
+          <div className="item-cards">
+            <div className="item">
+              <ItemCard
+                image="/images/product-images/equipment01.jpg"
+                productName="Anesthesia Machine"
+              />
+            </div>
+            <div className="item">
+              <ItemCard
+                image="/images/product-images/equipment02.jpg"
+                productName="Operating table"
+              />
+            </div>
+            <div className="item">
+              <ItemCard
+                image="/images/product-images/equipment03.jpg"
+                productName="Operating light "
+              />
+            </div>
+            {/* <div className="item">
         <ItemCard image="/images/product-images/equipment04.png" productName="BLUE GATE UPS"/>
       </div>
       <div className="item">
@@ -241,8 +305,34 @@ MACHINES
         <ItemCard image="/images/product-images/equipment11.png" productName="GE/Datex Ohmeda 5/7900 Anesthesia machine"/>
       </div> */}
           </div>
+        </div>
+        <div className="flash" hidden={show !== "All" || "consumeables"}>
+          <div className="header">
+            <h3>
+              <BiCategory className="icon" />
+              Medical Consumeables
+            </h3>
+            <button>
+              <p>
+                View all <BsForwardFill className="icon" />
+              </p>
+            </button>
           </div>
-
+          <div className="consumeables-container">
+            <div>
+              {" "}
+              <Consumeables productName="Dialysis Consumables" />
+            </div>
+            <div>
+              {" "}
+              <Consumeables productName="Dialyzer" />
+            </div>
+            <div>
+              {" "}
+              <Consumeables productName="Bloodline" />
+            </div>
+          </div>
+        </div>
         <section
           className="short-message-wrapper"
           data-aos="zoom-in-right"
