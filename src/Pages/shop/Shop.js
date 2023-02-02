@@ -61,12 +61,12 @@ console.log(show)
           </button>
 
           <ul className="ul">
-            <li onClick={()=>handleClick('Hemodialysis')}>Hemodialysis Machines</li>
-            <li onClick={()=>handleClick('ICU')}>ICU Equipment</li>
-            <li onClick={()=>handleClick('Operating Theatre ')}>Operating Theatre Equipment</li>
-            <li onClick={()=>handleClick('Diagnostic Imaging Equipment ')}>Diagnostic Imaging Equipment</li>
-            <li onClick={()=>handleClick('consumeables ')}>All consumables</li>
-            <li>Services</li>
+            <Link to="#Hemodialysis"><li>Hemodialysis Machines</li></Link>
+            <Link to="#ICU"> <li >ICU Equipment</li></Link>
+            <Link to="#Operating_Theatre_Equipment"> <li >Operating Theatre Equipment</li></Link>
+            <Link to="#Diagnostic_Imaging_Equipment"> <li>Diagnostic Imaging Equipment</li></Link>
+            <Link to="#consumables"> <li>All consumables</li></Link>
+            <NavLink to="/service"><li>Services</li></NavLink>
           </ul>
         </div>
         <div className="search">
@@ -87,7 +87,7 @@ console.log(show)
       </div>
 
       <main className="shop-main">
-        <div className="flash" hidden={show !== "Hemodialysis" }>
+        <div className="flash" id="Hemodialysis">
           <div className="header">
             <h3>
               <IoIosFlash className="icon" />
@@ -151,7 +151,7 @@ console.log(show)
             </div>
           </div>
         </div>
-        <div className="flash" hidden={show !== "All" }>
+        <div className="flash" id="ICU">
           <div className="header">
             <h3>
               <BiCategory className="icon" />
@@ -188,7 +188,7 @@ console.log(show)
           </div>
         </div>
 
-        <div className="flash" hidden={show !== "All"}>
+        <div className="flash" id="Diagnostic_Imaging_Equipment">
           <div className="header">
             <h3>
               <BsGiftFill className="icon" />
@@ -248,7 +248,7 @@ console.log(show)
       </div> */}
           </div>
         </div>
-        <div className="flash" hidden={show !== "All"}>
+        <div className="flash" id="Operating_Theatre_Equipment">
           <div className="header">
             <h3>
               <BsGiftFill className="icon" />
@@ -305,7 +305,7 @@ console.log(show)
       </div> */}
           </div>
         </div>
-        <div className="flash" hidden={show !== "All" || "consumeables"}>
+        <div className="flash">
           <div className="header">
             <h3>
               <BiCategory className="icon" />
