@@ -56,7 +56,6 @@ console.log(show)
       <div className="top">
         <div className="cat_dropdown">
           <button>
-            {" "}
             <BiCategory className="icon" />
             CATEGORIES
           </button>

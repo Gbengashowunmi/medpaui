@@ -170,10 +170,7 @@ export default function HeadFoot({ children }) {
               FAQ
             </li>
             </NavLink>
-            <li>
-              <FaChevronRight />
-              Our process
-            </li>
+
           </ul>
         </div>
         <div

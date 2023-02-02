@@ -37,7 +37,15 @@ export default function Mgtp() {
 <img  src="/images/MGTP-EDIT-01-1-1024x576.png" alt="mgtp logo" className="hero-image" />
 <h3>MEDPAU GRADUATE TRAINEE PROGRAM (MGTP)</h3>
 
-<section>
+<section className="mgtp-section"
+          data-aos="zoom-in"
+          data-aos-offset="20"
+          data-aos-delay="30"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
+>
   <div className="image">
   <img src="/images/DSC3954-1-1024x731.jpg" alt="team" />
   </div>
@@ -51,7 +59,15 @@ This program will expose you to unlimited opportunities for personal and profess
 <br />
 And if you are looking to build your own healthcare business, then you will also find the platform and partnership you need to grow and thrive with us.</p>
 </section>
-<section>
+<section className="mgtp-section"
+           data-aos="zoom-in"
+           data-aos-offset="20"
+           data-aos-delay="30"
+           data-aos-duration="1000"
+           data-aos-easing="ease-in-out"
+           data-aos-mirror="true"
+           data-aos-once="false"
+ >
  <div>
   <h4>WHY MEDPAU GRADUATE TRAINEE PROGRAM
 </h4>
@@ -98,7 +114,15 @@ industry experience who will tutor and provide you feedback</p>
  </div>
 </section>
 
-<section className="note">
+<section className="note"
+          data-aos="zoom-in"
+          data-aos-offset="20"
+          data-aos-delay="30"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
+>
   <div className="note1">
 <p><strong>NOTE</strong></p>
 <ul>

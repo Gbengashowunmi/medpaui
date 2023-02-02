@@ -3,10 +3,8 @@
     width: 30%;
     height: auto;
 }
-h3{
-    color: var(--clr-primary);
-}
-section{
+
+.mgtp-section{
     width: 100%;
     // border: 2px solid red;
     display:grid;
@@ -49,7 +47,7 @@ border-left: 6px solid var(--clr-primary);
 }
 
 @media (max-width:900px) {
-    section{
+    .mgtp-section{
         grid-template-columns: 1fr;
         gap:1rem;
     }
