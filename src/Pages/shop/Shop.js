@@ -144,8 +144,8 @@ setProducts(data)
           <div className="consumeables-container">
           {products.filter(filtered=> filtered.category === "ICU consumeables").map(product=>{
       return (
-        <div>
-          <Consumeables key={product.id} image={product.image}
+        <div key={product.id}>
+          <Consumeables id={product.id} image={product.image}
             productName={product.name}
           />
         </div>

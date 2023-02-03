@@ -2,11 +2,11 @@ import React from 'react'
 import { BsStar, BsStarFill, BsStarHalf } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import "./itemCard.scss"
-export default function ItemCard({image,productName}) {
+export default function ItemCard({image,productName, id}) {
   return (
     <div className='item_container'>
         <div className='image'>
-          <Link to="/details">  <img src={image} alt="product" />
+          <Link to={`/details/${id}`}>  <img src={image} alt="product" />
           </Link>
         </div>
         <div className='description'>
