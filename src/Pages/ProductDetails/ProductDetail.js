@@ -1,11 +1,16 @@
 import { Button } from "@mui/material";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import data from "../../component/Data";
 import HeadFoot from "../../component/HeadFoot";
 import ItemCard from "../../component/ItemCard/ItemCard";
 import "./ProductDetails.scss";
 
 export default function ProductDetail() {
+
+  const {id} = useParams()
+  const [product] = data.filter(singleProduct => singleProduct.id === +id)
+
   return (
     <HeadFoot>
       <div className="product-page">
@@ -13,33 +18,14 @@ export default function ProductDetail() {
           <div className="product-img">
             <div className="main-img">
               <img
-                src="/images/product-images/equipment01.jpg"
+                src={product.image}
                 alt="product"
               />
             </div>
-            {/* <div className="img-color">
-              <div className="sub-img">
-                <img
-                  src="https://bonik-react.vercel.app/assets/images/products/headphone.png"
-                  alt=""
-                />
-              </div>
-              <div className="sub-img">
-                <img
-                  src="https://bonik-react.vercel.app/assets/images/products/hiclipart.com%20(16).png"
-                  alt=""
-                />
-              </div>
-              <div className="sub-img">
-                <img
-                  src="https://bonik-react.vercel.app/assets/images/products/hiclipart.com%20(18).png"
-                  alt=""
-                />
-              </div>
-            </div> */}
+
           </div>
           <div className="product-info">
-            <h2>APC Schneider UPS</h2>
+            <h2>{product.name}</h2>
             <p>
               Brand: <span>Ziaomi</span>
             </p>
@@ -49,7 +35,7 @@ export default function ProductDetail() {
             <p>
               Rated: <span> (50)</span>
             </p>
-            <h4 className="price">$1135.00</h4>
+            {/* <h4 className="price">$1135.00</h4> */}
             <p>Stock Available</p>
             <Link to="//api.whatsapp.com/send?phone=2349085323596"  target="_blank"><Button variant="contained" className="addtocart-btn">
               Place Order

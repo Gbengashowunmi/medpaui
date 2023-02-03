@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { BiCategory } from "react-icons/bi";
 import { IoIosFlash } from "react-icons/io";
@@ -14,19 +14,17 @@ import CenterSlider from "../../component/CenterSlider";
 import { MdOutlineHome } from "react-icons/md";
 import { FaChevronRight } from "react-icons/fa";
 import Consumeables from "../../component/consumeables/Consumeables";
+import data from "../../component/Data";
 
 export default function Shop() {
 
-  const [show, setShow] = useState("All")
-  
-    const handleClick = (category)=>{
-setShow(category)
-}
-console.log(show)
+const [products, setProducts] =useState([])
+useEffect(()=>{
+setProducts(data)
+},[])
 
   return (
     <HeadFoot>
-    
       <div className="about-head">
         <div className="image">
           <div className="overlay"></div>
@@ -109,46 +107,17 @@ console.log(show)
             </h3>
           </div>
           <div className="consumeables-container">
-            <div>
-              {" "}
-              <Consumeables productName="Dialyzer" />
-            </div>
-            <div>
-              {" "}
-              <Consumeables productName="Bloodline" />
-            </div>
-            <div>
-              {" "}
-              <Consumeables productName="Acid concentrate" />
-            </div>
-            <div>
-              {" "}
-              <Consumeables productName="Fistula needle" />
-            </div>
-            <div>
-              {" "}
-              <Consumeables productName="Bicarbonate bag" />
-            </div>
-            <div>
-              {" "}
-              <Consumeables productName="Bicarbonate cartridge" />
-            </div>
-            <div>
-              {" "}
-              <Consumeables productName="Femoral catheter" />
-            </div>
-            <div>
-              {" "}
-              <Consumeables productName="Guide wire" />
-            </div>
-            <div>
-              {" "}
-              <Consumeables productName="Double Lumen catheter" />
-            </div>
-            <div>
-              {" "}
-              <Consumeables productName="Citrosteril" />
-            </div>
+
+          {products.filter(filtered=> filtered.category === "hemodialysis consumeables").map(product=>{
+      return (
+        <div key={product.id}>
+          <Consumeables id={product.id} image={product.image}
+            productName={product.name}
+          />
+        </div>
+      )
+    })}
+
           </div>
         </div>
         <div className="flash" id="ICU">
@@ -173,10 +142,15 @@ console.log(show)
             </h3>
           </div>
           <div className="consumeables-container">
-            <div>
-              {" "}
-              <Consumeables productName="Breathing Circuit" />
-            </div>
+          {products.filter(filtered=> filtered.category === "ICU consumeables").map(product=>{
+      return (
+        <div>
+          <Consumeables key={product.id} image={product.image}
+            productName={product.name}
+          />
+        </div>
+      )
+    })}
           </div>
         </div>
         <div className="sales-banner">
@@ -201,51 +175,15 @@ console.log(show)
             </button>
           </div>
           <div className="item-cards">
-            <div className="item">
-              <ItemCard
-                image="/images/product-images/equipment01.jpg"
-                productName="MRI"
-              />
+            {products.filter(filtered=> filtered.category === "Diagnostic Imaging Equipment").map(product=>{
+      return (
+        <div className="item" key={product.id}>
+          <ItemCard id={product.id} image={product.image}
+            productName={product.name}
+            />
             </div>
-            <div className="item">
-              <ItemCard
-                image="/images/product-images/equipment02.jpg"
-                productName="CT"
-              />
-            </div>
-            <div className="item">
-              <ItemCard
-                image="/images/product-images/equipment03.jpg"
-                productName="Ultrasound"
-              />
-            </div>
-            <div className="item">
-              <ItemCard
-                image="/images/product-images/equipment04.png"
-                productName="Radiography e.g X-ray machine"
-              />
-            </div>
-            {/* <div className="item">
-        <ItemCard image="/images/product-images/equipment05.png" productName="Ceiling-mounted surgical light – PG EYES" />
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment06.jpg" productName="Defibrillator – RESCUE LIFE 7″ DISPLAY VERSION"/>
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment07.png" productName="Dräger Primus® Anesthesia Machine"/>
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment08.jpg" productName="Extracorporeal Blood Circuit for Blood Purification"/>
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment09.jpg" productName="Fresenius 4008S classix Dialysis Machine "/>
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment10.jpg" productName="GE Aespire S5 Anesthesia Machine with 7900 Smartvent "/>
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment11.png" productName="GE/Datex Ohmeda 5/7900 Anesthesia machine"/>
-      </div> */}
+      )
+    })}           
           </div>
         </div>
         <div className="flash" id="Operating_Theatre_Equipment">
@@ -261,48 +199,15 @@ console.log(show)
             </button>
           </div>
           <div className="item-cards">
-            <div className="item">
-              <ItemCard
-                image="/images/product-images/equipment01.jpg"
-                productName="Anesthesia Machine"
-              />
+          {products.filter(filtered=> filtered.category === "Operating Theatre Equipment").map(product=>{
+      return (
+        <div className="item" key={product.id}>
+          <ItemCard id={product.id} image={product.image}
+            productName={product.name}
+            />
             </div>
-            <div className="item">
-              <ItemCard
-                image="/images/product-images/equipment02.jpg"
-                productName="Operating table"
-              />
-            </div>
-            <div className="item">
-              <ItemCard
-                image="/images/product-images/equipment03.jpg"
-                productName="Operating light "
-              />
-            </div>
-            {/* <div className="item">
-        <ItemCard image="/images/product-images/equipment04.png" productName="BLUE GATE UPS"/>
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment05.png" productName="Ceiling-mounted surgical light – PG EYES" />
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment06.jpg" productName="Defibrillator – RESCUE LIFE 7″ DISPLAY VERSION"/>
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment07.png" productName="Dräger Primus® Anesthesia Machine"/>
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment08.jpg" productName="Extracorporeal Blood Circuit for Blood Purification"/>
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment09.jpg" productName="Fresenius 4008S classix Dialysis Machine "/>
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment10.jpg" productName="GE Aespire S5 Anesthesia Machine with 7900 Smartvent "/>
-      </div>
-      <div className="item">
-        <ItemCard image="/images/product-images/equipment11.png" productName="GE/Datex Ohmeda 5/7900 Anesthesia machine"/>
-      </div> */}
+      )
+    })} 
           </div>
         </div>
         <div className="flash">
@@ -318,18 +223,16 @@ console.log(show)
             </button>
           </div>
           <div className="consumeables-container">
-            <div>
-              {" "}
-              <Consumeables productName="Dialysis Consumables" />
+          {products.filter(filtered=> filtered.category === "Medical Consumeables").map(product=>{
+      return (
+        <div key={product.id}>
+          <Consumeables id={product.id} image={product.image}
+            productName={product.name}
+            />
             </div>
-            <div>
-              {" "}
-              <Consumeables productName="Dialyzer" />
-            </div>
-            <div>
-              {" "}
-              <Consumeables productName="Bloodline" />
-            </div>
+      )
+    })}
+
           </div>
         </div>
         <section

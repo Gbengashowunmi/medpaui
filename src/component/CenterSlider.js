@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
+import data from "./Data";
 import ProductCard from "./productCard/ProductCard";
 
 export default function CenterSlider() {
@@ -36,59 +37,23 @@ export default function CenterSlider() {
       },
     ],
   };
+
+  const [products, setProducts] = useState([])
+  useEffect(()=>{
+  setProducts(data)
+  },[])
   return (
     <Slider {...settings}>
-      <div className="item">
-        <ProductCard
-          image="/images/product-images/equipment01.jpg"
-          productName="Dialysis machines: Fresenius 4008s Classix, Nikkiso DBB-07"
-        />
-      </div>
-      <div className="item">
-        <ProductCard
-          image="/images/product-images/equipment02.jpg"
-          productName="Dialysis chair: Automatic and Manual "
-        />
-      </div>
-      <div className="item">
-        <ProductCard
-          image="/images/product-images/equipment03.jpg"
-          productName="Water treatment system"
-        />
-      </div>
-      <div className="item">
-        <ProductCard
-          image="/images/product-images/equipment04.png"
-          productName="Renal Function Kit"
-        />
-      </div>
-      <div className="item">
-        <ProductCard
-          image="/images/product-images/equipment01.jpg"
-          productName="Dialysis machines: Fresenius 4008s Classix, Nikkiso DBB-07"
-        />
-      </div>
-      {/* <div className="item">
-        <ProductCard image="/images/product-images/equipment05.png" productName="Ceiling-mounted surgical light – PG EYES" />
-      </div>
-      <div className="item">
-        <ProductCard image="/images/product-images/equipment06.jpg" productName="Defibrillator - RESCUE LIFE 7″ DISPLAY VERSION"/>
-      </div>
-      <div className="item">
-        <ProductCard image="/images/product-images/equipment07.png" productName="Dräger Primus® Anesthesia Machine"/>
-      </div>
-      <div className="item">
-        <ProductCard image="/images/product-images/equipment08.jpg" productName="Extracorporeal Blood Circuit for Blood Purification"/>
-      </div>
-      <div className="item">
-        <ProductCard image="/images/product-images/equipment09.jpg" productName="Fresenius 4008S classix Dialysis Machine "/>
-      </div>
-      <div className="item">
-        <ProductCard image="/images/product-images/equipment10.jpg" productName="GE Aespire S5 Anesthesia Machine with 7900 Smartvent "/>
-      </div>
-      <div className="item">
-        <ProductCard image="/images/product-images/equipment11.png" productName="GE/Datex Ohmeda 5/7900 Anesthesia machine"/>
-      </div> */}
+    {products.filter(filtered=> filtered.category === "hemodialysis").map(product=>{
+      return (
+        <div className="item" key={product.id}>
+          <ProductCard id={product.id} image={product.image}
+            productName={product.name}
+          />
+        </div>
+      )
+    })}
+
     </Slider>
   );
 }

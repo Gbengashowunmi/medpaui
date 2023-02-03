@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "./slick.css";
 import "./slick-theme.css";
 import ProductCard from "./productCard/ProductCard";
-// import ProductCard from "./productCard/ProductCard";
+import data from "./Data"
 export default function SimpleSlider() {
   var settings = {
     dots: false,
@@ -41,80 +41,25 @@ export default function SimpleSlider() {
       },
     ],
   };
-  return (
-    <Slider {...settings}>
-      <div className="item">
-        <ProductCard
-          image="/images/product-images/equipment01.jpg"
-          productName="Ventilators"
-        />
-      </div>
-      <div className="item">
-        <ProductCard
-          image="/images/product-images/equipment02.jpg"
-          productName="Patient Monitor"
-        />
-      </div>
-      <div className="item">
-        <ProductCard
-          image="/images/product-images/equipment03.jpg"
-          productName="Defibrillator"
-        />
-      </div>
-      <div className="item">
-        <ProductCard
-          image="/images/product-images/equipment04.png"
-          productName="Infusion pump"
-        />
-      </div>
-      <div className="item">
-        <ProductCard
-          image="/images/product-images/equipment01.jpg"
-          productName="Ventilators"
-        />
-      </div>
-      {/* <div className="item">
-        <ProductCard
-          image="/images/product-images/equipment05.png"
-          productName="Ceiling-mounted surgical light – PG EYES"
-        />
-      </div>
-      <div className="item">
-        <ProductCard
-          image="/images/product-images/equipment06.jpg"
-          productName="Defibrillator – RESCUE LIFE 7″ DISPLAY VERSION"
-        />
-      </div>
-      <div className="item">
-        <ProductCard
-          image="/images/product-images/equipment07.png"
-          productName="Dräger Primus® Anesthesia Machine"
-        />
-      </div>
-      <div className="item">
-        <ProductCard
-          image="/images/product-images/equipment08.jpg"
-          productName="Extracorporeal Blood Circuit for Blood Purification"
-        />
-      </div>
-      <div className="item">
-        <ProductCard
-          image="/images/product-images/equipment09.jpg"
-          productName="Fresenius 4008S classix Dialysis Machine "
-        />
-      </div>
-      <div className="item">
-        <ProductCard
-          image="/images/product-images/equipment10.jpg"
-          productName="GE Aespire S5 Anesthesia Machine with 7900 Smartvent "
-        />
-      </div>
-      <div className="item">
-        <ProductCard
-          image="/images/product-images/equipment11.png"
-          productName="GE/Datex Ohmeda 5/7900 Anesthesia machine"
-        />
-      </div> */}
+
+
+  const [products, setProducts] = useState([])
+useEffect(()=>{
+setProducts(data)
+},[])
+return (
+  <Slider {...settings}>
+    {products.filter(filtered=> filtered.category === "ICU Equipment").map(product=>{
+      return (
+        <div className="item" key={product.id}>
+          <ProductCard id={product.id} image={product.image}
+            productName={product.name}
+          />
+        </div>
+      )
+    })}
+    
+      
     </Slider>
   );
 }
