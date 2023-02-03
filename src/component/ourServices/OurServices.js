@@ -12,13 +12,12 @@ export default function OurServices({head, decsription}) {
     data-aos-mirror="true"
     data-aos-once="true"
     >
-        <div className="overlay"></div>
       <div className="icon"></div>
       <h4>{head}</h4>
       <p>
         {decsription}
       </p>
-      <button className="read-more-btn">READ MORE</button> 
+      {/* <button className="read-more-btn">READ MORE</button>  */}
     </div>
   );
 }

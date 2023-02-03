@@ -5,7 +5,7 @@
 }
 
 .mgtp-section{
-    width: 100%;
+    width: 90%;
     // border: 2px solid red;
     display:grid;
     padding: 2rem;
@@ -13,6 +13,7 @@
     gap:2rem;
     text-align: left;
     line-height: 2.5rem;
+    margin: auto;
     h4{
         color: var(--clr-secondary);
     }
@@ -29,12 +30,14 @@ ul{
 }
 
 .note{
-    width: 100%;
+    width: 90%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin: auto;
+    gap: 2rem;
     .note1{
     padding: 2rem 1rem;
-
+text-align: left;
     }
     .note2{
         border: 2px solid navy;

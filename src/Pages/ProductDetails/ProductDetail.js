@@ -35,12 +35,12 @@ export default function ProductDetail() {
             <p>
               Decsription: <span>APC Smart UPS is for uninterruptible power supply protection and management solutions. This UPS power supply provides protection from power surges, load shedding and unpredictable weather conditions during dialysis in the home or facility.</span>
             </p>
-            <p>
+            {/* <p>
               Rated: <span> (50)</span>
-            </p>
+            </p> */}
             {/* <h4 className="price">$1135.00</h4> */}
             <p>Stock Available</p>
-            <Link to="//api.whatsapp.com/send?phone=2349085323596&text=Hi+TobiDigital.+I'm+interested+in+your+web+design+promo"  target="_blank"><Button variant="contained" className="addtocart-btn">
+            <Link to={`//api.whatsapp.com/send?phone=2349085323596&text=Hi+MedPau+International.+I'm+interested+in+buyng+${product.name}.+How+much+does+it+cost?`}  target="_blank"><Button variant="contained" className="addtocart-btn">
               Place Order
             </Button>
             </Link>

@@ -15,10 +15,16 @@ import { MdOutlineHome } from "react-icons/md";
 import { FaChevronRight } from "react-icons/fa";
 import Consumeables from "../../component/consumeables/Consumeables";
 import data from "../../component/Data";
+import { ThreeCircles } from  'react-loader-spinner'
 
 export default function Shop() {
 
 const [products, setProducts] =useState([])
+const [loading, setLoading] =useState(true)
+
+setTimeout(() => {
+  setLoading(false)
+}, 3000);
 useEffect(()=>{
 setProducts(data)
 },[])
@@ -85,192 +91,208 @@ setProducts(data)
       </div>
 
       <main className="shop-main">
-        <div className="flash" id="Hemodialysis">
-          <div className="header">
-            <h3>
-              <IoIosFlash className="icon" />
-              HEMODIALYSIS MACHINES
-            </h3>
-            <button>
-              <p>
-                View all <BsForwardFill className="icon" />
-              </p>
-            </button>
-          </div>
-          <div className="products-container">
-            <CenterSlider />
-          </div>
-          <div className="header">
-            <h3>
-              <IoIosFlash className="icon" />
-              Hemodialysis Consumeables
-            </h3>
-          </div>
-          <div className="consumeables-container">
+      {loading?<ThreeCircles
+  height="100"
+  width="100"
+  color="#2843f5"
+  wrapperStyle={{}}
+  wrapperClass=""
+  visible={true}
+  ariaLabel="three-circles-rotating"
+  outerCircleColor=""
+  innerCircleColor=""
+  middleCircleColor=""
+/>:
+<>
+      <div className="flash" id="Hemodialysis">
+        <div className="header">
+          <h3>
+            <IoIosFlash className="icon" />
+            HEMODIALYSIS MACHINES
+          </h3>
+          <button>
+            <p>
+              View all <BsForwardFill className="icon" />
+            </p>
+          </button>
+        </div>
+        <div className="products-container">
+          <CenterSlider />
+        </div>
+        <div className="header">
+          <h3>
+            <IoIosFlash className="icon" />
+            Hemodialysis Consumeables
+          </h3>
+        </div>
+        <div className="consumeables-container">
 
-          {products.filter(filtered=> filtered.category === "hemodialysis consumeables").map(product=>{
-      return (
-        <div key={product.id}>
-          <Consumeables id={product.id} image={product.image}
-            productName={product.name}
-          />
-        </div>
-      )
-    })}
+        {products.filter(filtered=> filtered.category === "hemodialysis consumeables").map(product=>{
+    return (
+      <div key={product.id}>
+        <Consumeables id={product.id} image={product.image}
+          productName={product.name}
+        />
+      </div>
+    )
+  })}
 
+        </div>
+      </div>
+      <div className="flash" id="ICU">
+        <div className="header">
+          <h3>
+            <BiCategory className="icon" />
+            ICU EQUIPMENTS
+          </h3>
+          <button>
+            <p>
+              View all <BsForwardFill className="icon" />
+            </p>
+          </button>
+        </div>
+        <div className="products-container">
+          <SimpleSlider />
+        </div>
+        <div className="header">
+          <h3>
+            <IoIosFlash className="icon" />
+            ICU Consumeables
+          </h3>
+        </div>
+        <div className="consumeables-container">
+        {products.filter(filtered=> filtered.category === "ICU consumeables").map(product=>{
+    return (
+      <div key={product.id}>
+        <Consumeables id={product.id} image={product.image}
+          productName={product.name}
+        />
+      </div>
+    )
+  })}
+        </div>
+      </div>
+      <div className="sales-banner">
+        <div className="banner1"></div>
+        <div className="banner2">
+          <div className="image">
+            <img src="/images/sales.png" alt="banner2" />
           </div>
         </div>
-        <div className="flash" id="ICU">
-          <div className="header">
-            <h3>
-              <BiCategory className="icon" />
-              ICU EQUIPMENTS
-            </h3>
-            <button>
-              <p>
-                View all <BsForwardFill className="icon" />
-              </p>
-            </button>
-          </div>
-          <div className="products-container">
-            <SimpleSlider />
-          </div>
-          <div className="header">
-            <h3>
-              <IoIosFlash className="icon" />
-              ICU Consumeables
-            </h3>
-          </div>
-          <div className="consumeables-container">
-          {products.filter(filtered=> filtered.category === "ICU consumeables").map(product=>{
-      return (
-        <div key={product.id}>
-          <Consumeables id={product.id} image={product.image}
-            productName={product.name}
-          />
-        </div>
-      )
-    })}
-          </div>
-        </div>
-        <div className="sales-banner">
-          <div className="banner1"></div>
-          <div className="banner2">
-            <div className="image">
-              <img src="/images/sales.png" alt="banner2" />
-            </div>
-          </div>
-        </div>
+      </div>
 
-        <div className="flash" id="Diagnostic_Imaging_Equipment">
-          <div className="header">
-            <h3>
-              <BsGiftFill className="icon" />
-              Diagnostic Imaging Equipment
-            </h3>
-            <button>
-              <p>
-                View all <BsForwardFill className="icon" />
-              </p>
-            </button>
-          </div>
-          <div className="item-cards">
-            {products.filter(filtered=> filtered.category === "Diagnostic Imaging Equipment").map(product=>{
-      return (
-        <div className="item" key={product.id}>
-          <ItemCard id={product.id} image={product.image}
-            productName={product.name}
-            />
-            </div>
-      )
-    })}           
-          </div>
+      <div className="flash" id="Diagnostic_Imaging_Equipment">
+        <div className="header">
+          <h3>
+            <BsGiftFill className="icon" />
+            Diagnostic Imaging Equipment
+          </h3>
+          <button>
+            <p>
+              View all <BsForwardFill className="icon" />
+            </p>
+          </button>
         </div>
-        <div className="flash" id="Operating_Theatre_Equipment">
-          <div className="header">
-            <h3>
-              <BsGiftFill className="icon" />
-              Operating Theatre Equipment
-            </h3>
-            <button>
-              <p>
-                View all <BsForwardFill className="icon" />
-              </p>
-            </button>
+        <div className="item-cards">
+          {products.filter(filtered=> filtered.category === "Diagnostic Imaging Equipment").map(product=>{
+    return (
+      <div className="item" key={product.id}>
+        <ItemCard id={product.id} image={product.image}
+          productName={product.name}
+          />
           </div>
-          <div className="item-cards">
-          {products.filter(filtered=> filtered.category === "Operating Theatre Equipment").map(product=>{
-      return (
-        <div className="item" key={product.id}>
-          <ItemCard id={product.id} image={product.image}
-            productName={product.name}
-            />
-            </div>
-      )
-    })} 
-          </div>
+    )
+  })}           
         </div>
-        <div className="flash">
-          <div className="header">
-            <h3>
-              <BiCategory className="icon" />
-              Medical Consumeables
-            </h3>
-            <button>
-              <p>
-                View all <BsForwardFill className="icon" />
-              </p>
-            </button>
+      </div>
+      <div className="flash" id="Operating_Theatre_Equipment">
+        <div className="header">
+          <h3>
+            <BsGiftFill className="icon" />
+            Operating Theatre Equipment
+          </h3>
+          <button>
+            <p>
+              View all <BsForwardFill className="icon" />
+            </p>
+          </button>
+        </div>
+        <div className="item-cards">
+        {products.filter(filtered=> filtered.category === "Operating Theatre Equipment").map(product=>{
+    return (
+      <div className="item" key={product.id}>
+        <ItemCard id={product.id} image={product.image}
+          productName={product.name}
+          />
           </div>
-          <div className="consumeables-container">
-          {products.filter(filtered=> filtered.category === "Medical Consumeables").map(product=>{
-      return (
-        <div key={product.id}>
-          <Consumeables id={product.id} image={product.image}
-            productName={product.name}
-            />
-            </div>
-      )
-    })}
+    )
+  })} 
+        </div>
+      </div>
+      <div className="flash">
+        <div className="header">
+          <h3>
+            <BiCategory className="icon" />
+            Medical Consumeables
+          </h3>
+          <button>
+            <p>
+              View all <BsForwardFill className="icon" />
+            </p>
+          </button>
+        </div>
+        <div className="consumeables-container">
+        {products.filter(filtered=> filtered.category === "Medical Consumeables").map(product=>{
+    return (
+      <div key={product.id}>
+        <Consumeables id={product.id} image={product.image}
+          productName={product.name}
+          />
+          </div>
+    )
+  })}
 
-          </div>
         </div>
-        <section
-          className="short-message-wrapper"
-          data-aos="zoom-in-right"
-          data-aos-offset="50"
-          data-aos-delay="10"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="true"
-        >
-          <ShortMessage
-            header="Worldwide Delivery
+      </div>
+      <section
+        className="short-message-wrapper"
+        data-aos="zoom-in-right"
+        data-aos-offset="50"
+        data-aos-delay="10"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="true"
+      >
+        <ShortMessage
+          header="Worldwide Delivery
 "
-            description="We offer competitive prices on our 100 million plus product any range.
+          description="We offer competitive prices on our 100 million plus product any range.
 "
-          />
-          <ShortMessage
-            header="Safe Payment
+        />
+        <ShortMessage
+          header="Safe Payment
 "
-            description="We offer competitive prices on our 100 million plus product any range.
+          description="We offer competitive prices on our 100 million plus product any range.
 "
-          />
-          <ShortMessage
-            header="Shop With Confidence
+        />
+        <ShortMessage
+          header="Shop With Confidence
 "
-            description="We offer competitive prices on our 100 million plus product any range.
+          description="We offer competitive prices on our 100 million plus product any range.
 "
-          />
-          <ShortMessage
-            header="24/7 Support
+        />
+        <ShortMessage
+          header="24/7 Support
 "
-            description="We offer competitive prices on our 100 million plus product any range.
+          description="We offer competitive prices on our 100 million plus product any range.
 "
-          />
-        </section>
-      </main>
+        />
+      </section>
+      </>
+}
+    </main>
+
     </HeadFoot>
   );
 }
