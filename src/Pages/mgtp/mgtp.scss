@@ -5,7 +5,7 @@
 }
 
 .mgtp-section{
-    width: 90%;
+    width: 95%;
     // border: 2px solid red;
     display:grid;
     padding: 2rem;
@@ -53,6 +53,8 @@ border-left: 6px solid var(--clr-primary);
     .mgtp-section{
         grid-template-columns: 1fr;
         gap:1rem;
+    padding: 1rem;
+
     }
     
     .note{
@@ -62,6 +64,7 @@ border-left: 6px solid var(--clr-primary);
         }
         .note2{
         padding: 2rem 1rem;
+        margin-bottom: 1rem;
         }
     }
 }
