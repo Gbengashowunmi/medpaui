@@ -13,9 +13,29 @@ import {
 import { MdEmail, MdLocationPin } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
 import { Button } from "@mui/material";
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
 
 export default function HeadFoot({ children }) {
   const [isOpen, setIsOpen] = useState(false);
+
+
+  //modal
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+  const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 700,
+    bgcolor: 'background.paper',
+    border: '1px solid #02127c',
+    boxShadow: 24,
+    p: 4,
+  };
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
@@ -76,10 +96,25 @@ export default function HeadFoot({ children }) {
           <NavLink to="/mgtp">
           <li>MGTP</li>
           </NavLink>
-          <Button variant="contained" className="appointment-btn">
-            APPOINTMENT
-          </Button>
+          <Button variant="contained" className="appointment-btn" onClick={handleOpen}>Healthvest</Button>
+
         </ul>
+        <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style} className="healthvest_wrapper">
+          <Typography id="modal-modal-description" sx={{ mt: 2 }} >
+            <h2 className="light-blue-bg-text">What is Health Vest?</h2>
+            <p>A medical equipment financing platform is a convenient way for individuals and businesses to purchase the necessary goods they need without breaking their bank. With this platform, users are able to spread out payments over a length of time up to five years at competitive interest rates with no hidden costs. This makes it easier for consumers or companies who didn't have the money upfront, but still needed these products, to acquire them - especially those that can be quite costly such as medical imaging devices, diagnostic instruments, ventilators and more. Furthermore, customers have access to quality refurbished items which would further lower cost and allow buyers affordable payment options while adhering to regulatory industry standards we must meet in order achieve safe use and maintenance of our products.</p>
+
+            <Button variant="contained" className="appointment-btn" onClick={handleOpen}>Terms and Conditions</Button>
+            <Button variant="palette.success.dark" className="appointment-btn" onClick={handleOpen}>Apply</Button>
+          </Typography>
+        </Box>
+      </Modal>
       </header>
       {children}
       <footer>

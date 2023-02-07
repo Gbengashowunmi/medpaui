@@ -177,6 +177,10 @@ footer {
   }
 }
 
+.healthvest_wrapper{
+  width: 70%;
+  background-color: var(--clr-secondary);
+}
 @media (max-width: 1020px) {
   footer {
     grid-template-columns: 1fr 1fr;
