@@ -186,6 +186,21 @@ footer {
   margin: 10vh auto;
   overflow-y: auto;
   border-radius: 10px;
+  position: relative;
+  .cancel{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: var(--clr-border-shadow);
+    border-radius: 50px;
+    color: var(--clr-secondary);
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+  }
   h2, .modal-btns{
     margin:20px auto;
     display: flex;
@@ -328,6 +343,9 @@ footer {
     height: 80vh;
     margin:10vh auto;
     overflow-y: scroll;
+h2{
+  font-size: 100%;
+}
     h2, .modal-btns{
       margin:20px auto;
       display: flex;
