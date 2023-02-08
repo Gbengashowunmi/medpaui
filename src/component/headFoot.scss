@@ -317,6 +317,7 @@ footer {
       width: 40px;
       height: 40px;
       cursor: pointer;
+
     }
     .navbar-content {
       padding: 4rem 3rem;
@@ -333,7 +334,7 @@ footer {
       background: rgba(1, 1, 48, 0.822);
       backdrop-filter: blur(6px);
       transform: translateX(100%);
-      z-index: 95;
+      z-index: 98;
     }
 
     .navbar-content.open {
