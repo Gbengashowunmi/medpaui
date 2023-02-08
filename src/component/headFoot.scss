@@ -186,20 +186,23 @@ footer {
   margin: 10vh auto;
   overflow-y: auto;
   border-radius: 10px;
-  position: relative;
+  position: relative !important;
   .cancel{
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    background-color: var(--clr-border-shadow);
+    position: sticky;
+    background-color: var(--clr-background-grey);
     border-radius: 50px;
-    color: var(--clr-secondary);
-    right: 5px;
+    right: 0;
     top: 5px;
     cursor: pointer;
+  }
+  .cancel:hover{
+    background-color: var(--clr-border-shadow);
+
   }
   h2, .modal-btns{
     margin:20px auto;
