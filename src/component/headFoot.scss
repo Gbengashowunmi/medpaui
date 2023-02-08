@@ -79,6 +79,7 @@
       cursor: pointer;
       transition: 0.6s;
       border-radius: 5px;
+      outline: none;
     }
     .appointment-btn:hover {
       background-color: black;
@@ -178,8 +179,37 @@ footer {
 }
 
 .healthvest_wrapper{
-  width: 70%;
-  background-color: var(--clr-secondary);
+  width: 70% !important;
+  height: fit-content;
+  background-color: var(--clr-white);
+  padding: 1rem;
+  margin: 10vh auto;
+  overflow-y: auto;
+  h2, .modal-btns{
+    margin:20px auto;
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    justify-content: center;
+  }
+  .appointment-btn {
+    background-color: var(--clr-primary);
+    padding: 0.75rem 1.5rem;
+    width: fit-content;
+    // margin: auto;
+    border: none;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.6s;
+    border-radius: 5px;
+    outline: none;
+  }
+  .appointment-btn:hover {
+    background-color: black;
+    transition: 0.6s;
+  }
+  
 }
 @media (max-width: 1020px) {
   footer {
@@ -290,6 +320,40 @@ footer {
     .navbar-content.open {
       transform: translateX(0);
     }
+  }
+
+  .healthvest_wrapper{
+    width: 80% !important;
+    height: 80vh;
+    margin:10vh auto;
+    overflow-y: scroll;
+    h2, .modal-btns{
+      margin:20px auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+font-size: medium;
+    }
+    .appointment-btn {
+      background-color: var(--clr-primary);
+      padding: 0.75rem 1.5rem;
+      width: fit-content;
+      // margin: auto;
+      border: none;
+      color: white;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.6s;
+      border-radius: 5px;
+      outline: none;
+font-size: small;
+    }
+    .appointment-btn:hover {
+      background-color: black;
+      transition: 0.6s;
+    }
+    
   }
 }
 @media (max-width: 600px) {

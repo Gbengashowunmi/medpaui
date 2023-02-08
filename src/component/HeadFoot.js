@@ -105,15 +105,17 @@ export default function HeadFoot({ children }) {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style} className="healthvest_wrapper">
-          <Typography id="modal-modal-description" sx={{ mt: 2 }} >
+        <div className="healthvest_wrapper">
+          
             <h2 className="light-blue-bg-text">What is Health Vest?</h2>
             <p>A medical equipment financing platform is a convenient way for individuals and businesses to purchase the necessary goods they need without breaking their bank. With this platform, users are able to spread out payments over a length of time up to five years at competitive interest rates with no hidden costs. This makes it easier for consumers or companies who didn't have the money upfront, but still needed these products, to acquire them - especially those that can be quite costly such as medical imaging devices, diagnostic instruments, ventilators and more. Furthermore, customers have access to quality refurbished items which would further lower cost and allow buyers affordable payment options while adhering to regulatory industry standards we must meet in order achieve safe use and maintenance of our products.</p>
-
-            <Button variant="contained" className="appointment-btn" onClick={handleOpen}>Terms and Conditions</Button>
-            <Button variant="palette.success.dark" className="appointment-btn" onClick={handleOpen}>Apply</Button>
-          </Typography>
-        </Box>
+<div className="modal-btns">
+            <Button className="appointment-btn" onClick={handleClose}>Terms and Conditions</Button>
+            <Link to="//forms.gle/aJKSaxz2xyfbnQFy5">
+            <Button variant="contained" className="appointment-btn" onClick={handleClose}>Apply for healthvest</Button>
+            </Link>
+            </div>
+        </div>
       </Modal>
       </header>
       {children}
