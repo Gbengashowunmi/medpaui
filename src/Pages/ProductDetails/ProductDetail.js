@@ -40,7 +40,9 @@ export default function ProductDetail() {
             </p> */}
             {/* <h4 className="price">$1135.00</h4> */}
             <p>Stock Available</p>
-            <Link to={`//api.whatsapp.com/send?phone=2349085323596&text=Hi+MedPau+International.+I'm+interested+in+buyng+${product.name}.+How+much+does+it+cost?`}  target="_blank"><Button variant="contained" className="addtocart-btn">
+            <Link to="/payment"
+            // {`//api.whatsapp.com/send?phone=2349085323596&text=Hi+MedPau+International.+I'm+interested+in+buyng+${product.name}.+How+much+does+it+cost?`}  target="_blank"
+            ><Button variant="contained" className="addtocart-btn">
               Place Order
             </Button>
             </Link>

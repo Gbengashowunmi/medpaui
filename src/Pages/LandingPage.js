@@ -33,8 +33,8 @@ export default function LandingPage() {
             data-aos-mirror="true"
             data-aos-once="false"
           >
-            <h3>What we sell</h3>
-            <p>With over 50 best-selling medical equipment andd healthcare innovations, <strong>MedPau</strong> is driving the future of health care in Africa through <strong>Affordability</strong></p>
+            <h3>Our Specialized Solutions </h3>
+            <p>We offer various solutions to affordability and standard healthcare products and services</p>
             <Link to="/shop">
               {" "}
               <button>Check it out</button>
@@ -50,9 +50,10 @@ export default function LandingPage() {
             data-aos-mirror="true"
             data-aos-once="false"
           >
-            <h3>Need an Appointment?</h3>
-            <p>We constantly evolve in the way we provide healthcare solutions and services to deliver excellent customer experience,</p>
-            <button>Book Now</button>
+            <h3>Need financing?</h3>
+            <p>Financing solutions for your project and equipment procurement 
+</p>
+            <button>Reach out to us</button>
           </div>
           <div
             className="hero-card"
@@ -123,7 +124,7 @@ export default function LandingPage() {
             <img src="/images/card_image_01.jpg" alt="aside" />
           </div>
           <div className="text">
-            <h2>What we Offer</h2>
+            <h2>Hospital Turnkey Project solutions</h2>
             <p>
             Our commitment to promoting brilliant healthcare innovations, and increasing the access to affordable and quality healthcare is pivoted at improving the quality of life. We achieve this by distributing medical equipment and devices of leading brands, offering turnkey project management, consultancy, training and technical services.
             </p>
@@ -186,8 +187,8 @@ export default function LandingPage() {
 
       <aside className="new-arrivals">
         <div className="head">
-          <h6>FEATURE</h6>
-          <h2>New Arrivals</h2>
+          <h6>PARTNERSHIP</h6>
+          <h2>Our Partners</h2>
         </div>
         <div className="products-container">
           <CenterSlider />

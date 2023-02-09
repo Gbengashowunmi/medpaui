@@ -47,28 +47,13 @@ export default function About() {
           <h4 className="light-blue-bg-text">WHAT ABOUT US</h4>
           <h2>Medpau International Limited</h2>
           <p>
-            MedPau is a fast-growing company, ahead of the curve in the
-            distribution of medical equipment, consumables, disposables,
-            furniture and apparel. We believe smart innovations in healthcare is
-            key for the advancement of a healthy society, which translates to
-            better economy and quality of life. This drives us to constantly
-            evolve in the way we provide healthcare solutions and services in
-            Nigeria and Africa at large. Our goal is to bridge the access to
-            quality, affordable healthcare solutions and services. This is why
-            we distribute cost-effective state-of-the-art medical equipment and
-            instrumentation, offer Turnkey project management and
-            Maintenance/technical services. This way, we fulfill our promise of
-            improving the quality of life. At MedPau, we grow with our clients,
-            working with them every step of the way. We deliver excellent
-            customer experience through our unmatched after-sales support and
-            24/7 online support. Our partnership with global brands and
-            world-leading medical equipment manufacturers to meet our
-            obligations is indeed one way in which our lasting impact in this
-            forever revolutionary course has been measured.
+            <i>
+           "From the shores of start-up obscurity to a Pan-Africa Healthcare company.Medpau is driving the future of Healthcare through affordability."</i>
            
+           Since her incorporation in 2016, Medpau has been bridging access to quality and affordable Healthcare by providing Hospitals and Healthcare facilities with turnkey solutions, state-of-the-art medical equipment, consumables and equipment maintenance services. We offer full solutions for building and equipping new hospitals, refurbishing old hosptals as well as training and Consultancy services. We believe in empowering them with innovations and within the Healthcare business space
           </p>
 
-          <ul
+          {/* <ul
             data-aos="zoom-in-right"
             data-aos-offset="50"
             data-aos-delay="10"
@@ -82,11 +67,11 @@ export default function About() {
             <li>Intervention Success</li>
             <li>Client Satisfaction</li>
             <li>Patient Experience</li>
-          </ul>
+          </ul> */}
           <p className="blue-text">Do you have any question?</p>
           <h4>
           <a href="tel:+2349085323596">
-            <FaPhone /> <span>+234805 6666700 </span>
+            <FaPhone /> <span>+234908 532 3596</span>
             </a>
           </h4>
         </div>
@@ -104,7 +89,22 @@ export default function About() {
 " details="Our people are our strongest asset. Over the years we have built a dedicated team of highly responsive Engineers and Customer Service Personnels that provides unmatched after-sales support to our customers with utmost professionalism." image="images/images (1).jpg"/>
 </div>
       </section>
-
+<div className="vision_mission">
+  <h3>Our Vision</h3>
+  <p>To become a global brand to be reckoned with</p>
+</div>
+<div className="vision_mission">
+  <h3>Our Mission</h3>
+  <p>To be frontier in pioneering innovations and solutions to quality , affordable and sustainable Healthcare</p>
+</div>
+<div className="vision_mission">
+  <h3>Our Core Values</h3>
+  <p>Innovations</p>
+  <p>Excellence</p>
+  <p>Integrity</p>
+  <p>Responsiveness</p>
+  <p>Customer centricity</p>
+</div>
       <Statistics/>
       <section className="services">
         <h4 className="light-blue-bg-text head">OUR SERVICES</h4>

@@ -214,4 +214,8 @@ const data=[
     },
 ]
 
+export const partners =[
+    
+]
+
 export default data;

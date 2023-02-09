@@ -94,7 +94,7 @@ export default function HeadFoot({ children }) {
           </NavLink>
           <li>Our Blog</li>
           <NavLink to="/mgtp">
-          <li>MGTP</li>
+          <li>Careers</li>
           </NavLink>
           <Button variant="contained" className="appointment-btn" onClick={handleOpen}>Healthvest</Button>
 
@@ -173,34 +173,36 @@ export default function HeadFoot({ children }) {
           data-aos-once="false"
         >
           <div className="head">
-            <h3>Our Courses</h3>
+            <h3>Medpau impact projects </h3>
             <hr />
           </div>
           <ul>
-            <NavLink to="/about">
+            <NavLink to="/http://medpauimpacts.com/womens-network/">
               {" "}
               <li>
                 <FaChevronRight />
-                About Us
+                Medpau Women Network
               </li>
             </NavLink>
-            <NavLink to="/service">
+            <NavLink to="/http://medpauimpacts.com/mgtp/">
               <li>
                 <FaChevronRight />
-                Our Services
+                Medpau Graduate Training Program
               </li>
             </NavLink>
-            <NavLink to="/shop">
+            <NavLink to="/http://medpauimpacts.com/wkd/">
               {" "}
               <li>
                 <FaChevronRight />
-                Shop
+                World Kidney Day
               </li>
             </NavLink>
+            <NavLink to="/event">
             <li>
               <FaChevronRight />
               Events
             </li>
+            </NavLink>
             <NavLink to="/faq">
             <li>
               <FaChevronRight />
@@ -240,11 +242,9 @@ export default function HeadFoot({ children }) {
             <hr />
           </div>
           <ul>
-            <a href="tel:+2349085323596">
             <li>
-              <FaPhone /> <span>+234908 532 3596</span>
+              <FaPhone /> <a href="tel:+2348068516780">+234806 851 6780</a><a href="tel:+233256885072"> +23325 688 5072</a>
             </li>
-            </a>
             <a href="mailto:Info@medpau.net">
             <li>
               <MdEmail /> <span>Info@medpau.net</span>
